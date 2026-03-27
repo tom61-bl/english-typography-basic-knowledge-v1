@@ -6,527 +6,335 @@
   <title>The Typography Museum · 英文字体博物馆</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@300;400;500;600;700&family=Libre+Franklin:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Lobster+Two:ital,wght@0,400;0,700;1,400&family=IM+Fell+English:ital@0;1&family=UnifrakturMaguntia&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Noto+Serif+SC:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@300;400;500;600;700&family=Libre+Franklin:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Lobster+Two:ital,wght@0,400;0,700;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Noto+Serif+SC:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
-    /* ========================================
-       VARIABLES & RESET
-    ======================================== */
     :root {
-      --black: #1a1a1a;
-      --white: #f5f3ee;
-      --red: #E63946;
-      --blue: #1D3557;
-      --yellow: #F4D35E;
-      --gray: #6c757d;
-      --light-gray: #e9ecef;
-      --font-garamond: 'EB Garamond', 'Cormorant Garamond', Georgia, serif;
-      --font-caslon: 'Libre Baskerville', Georgia, serif;
-      --font-baskerville: 'Libre Baskerville', Georgia, serif;
-      --font-modern: 'Playfair Display', Georgia, serif;
-      --font-slab: 'Courier Prime', 'Courier New', monospace;
-      --font-geo: 'Space Grotesk', Arial, sans-serif;
-      --font-human: 'Libre Franklin', Arial, sans-serif;
-      --font-script: 'Lobster Two', cursive;
-      --font-blackletter: 'UnifrakturMaguntia', cursive;
-      --font-roman: 'IM Fell English', Georgia, serif;
-      --font-didot: 'Playfair Display', Georgia, serif;
-      --font-crimson: 'Crimson Pro', Georgia, serif;
+      --black:   #1a1a1a;
+      --white:   #f5f3ee;
+      --red:     #E63946;
+      --blue:    #1D3557;
+      --yellow:  #F4D35E;
+      --gray:    #6c757d;
+      --lgray:   #e9ecef;
+      --garamond:   'EB Garamond', serif;
+      --caslon:     'Libre Baskerville', Georgia, serif;
+      --modern:     'Playfair Display', Georgia, serif;
+      --courier:    'Courier Prime', monospace;
+      --geo:        'Space Grotesk', Arial, sans-serif;
+      --human:      'Libre Franklin', Arial, sans-serif;
+      --script:     'Lobster Two', cursive;
+      --crimson:    'Crimson Pro', Georgia, serif;
     }
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-
     body {
-      font-family: 'Space Grotesk', Arial, sans-serif;
-      background: var(--white);
-      color: var(--black);
-      line-height: 1.7;
-      overflow-x: hidden;
+      font-family: 'Space Grotesk', sans-serif;
+      background: var(--white); color: var(--black); line-height: 1.7; overflow-x: hidden;
     }
-
     ::selection { background: var(--red); color: var(--white); }
 
-    /* ========================================
-       NAVIGATION
-    ======================================== */
+    /* NAV */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      background: var(--white);
-      border-bottom: 3px solid var(--black);
+      background: var(--white); border-bottom: 3px solid var(--black);
       display: flex; align-items: center; justify-content: space-between;
-      padding: 0 2rem; height: 60px;
+      padding: 0 3rem; height: 56px;
     }
-
-    .nav-logo {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700; font-size: 1.1rem;
-      letter-spacing: 0.05em;
-    }
+    .nav-logo { font-weight: 700; font-size: 1rem; letter-spacing: 0.08em; }
     .nav-logo span { color: var(--red); }
-
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
     .nav-links a {
-      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em;
-      text-transform: uppercase; text-decoration: none; color: var(--black);
-      position: relative; padding-bottom: 2px;
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+      text-decoration: none; color: var(--black); position: relative; padding-bottom: 3px;
     }
     .nav-links a::after {
-      content: ''; position: absolute; bottom: 0; left: 0;
-      width: 0; height: 2px; background: var(--red); transition: width 0.3s;
+      content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px;
+      background: var(--red); transition: width 0.3s;
     }
     .nav-links a:hover::after { width: 100%; }
 
-    .lang-toggle {
-      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em;
-      border: 2px solid var(--black); background: transparent;
-      padding: 0.3rem 0.8rem; cursor: pointer; transition: all 0.2s;
+    /* SIDEBAR NAV */
+    .sidebar-nav {
+      position: fixed; right: 1.5rem; top: 50%; transform: translateY(-50%);
+      z-index: 900; display: flex; flex-direction: column; gap: 0.8rem;
     }
-    .lang-toggle:hover { background: var(--black); color: var(--white); }
+    .sidebar-nav a {
+      display: block; width: 10px; height: 10px;
+      border: 2px solid var(--black); background: var(--white);
+      transition: all 0.2s; position: relative; cursor: pointer;
+    }
+    .sidebar-nav a.active,
+    .sidebar-nav a:hover { background: var(--red); border-color: var(--red); }
+    .sidebar-nav a::before {
+      content: attr(data-label);
+      position: absolute; right: 18px; top: 50%; transform: translateY(-50%);
+      font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      white-space: nowrap; background: var(--black); color: var(--white);
+      padding: 0.2rem 0.5rem; opacity: 0; pointer-events: none; transition: opacity 0.2s;
+    }
+    .sidebar-nav a:hover::before { opacity: 1; }
 
-    /* ========================================
-       HERO
-    ======================================== */
+    /* HERO */
     .hero {
-      margin-top: 60px;
-      min-height: calc(100vh - 60px);
-      display: grid;
-      grid-template-columns: 55% 45%;
+      margin-top: 56px; min-height: calc(100vh - 56px);
+      display: grid; grid-template-columns: 1fr 1fr;
       border-bottom: 3px solid var(--black);
     }
-
     .hero-left {
-      padding: 4rem 3rem;
-      display: flex; flex-direction: column; justify-content: center;
-      border-right: 3px solid var(--black);
-      position: relative; overflow: hidden;
+      padding: 5rem 3.5rem; display: flex; flex-direction: column; justify-content: center;
+      border-right: 3px solid var(--black); position: relative; background: var(--white);
     }
-
     .hero-left::before {
-      content: ''; position: absolute;
-      top: -60px; right: -60px;
-      width: 280px; height: 280px;
-      border: 3px solid var(--yellow); border-radius: 50%; z-index: 0;
+      content: ''; position: absolute; top: 0; right: 0;
+      width: 0; height: 0;
+      border-style: solid; border-width: 0 80px 80px 0;
+      border-color: transparent var(--yellow) transparent transparent;
     }
-
     .hero-left::after {
-      content: ''; position: absolute;
-      bottom: 40px; left: 40px;
-      width: 80px; height: 80px;
-      background: var(--red); opacity: 0.08; z-index: 0;
+      content: ''; position: absolute; bottom: 0; left: 0;
+      width: 120px; height: 6px; background: var(--red);
     }
-
+    .hero-geo-1 { position: absolute; top: 20%; right: 3rem; width: 60px; height: 60px; border: 3px solid var(--red); border-radius: 50%; opacity: 0.5; }
+    .hero-geo-2 { position: absolute; bottom: 15%; right: 2rem; width: 40px; height: 40px; background: var(--blue); opacity: 0.3; }
+    .hero-geo-3 { position: absolute; top: 40%; left: 1rem; width: 20px; height: 20px; background: var(--yellow); opacity: 0.6; }
     .hero-eyebrow {
-      font-size: 0.68rem; font-weight: 700;
-      letter-spacing: 0.3em; text-transform: uppercase;
-      color: var(--red); margin-bottom: 1.5rem; position: relative; z-index: 1;
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--red); margin-bottom: 1.5rem;
     }
-
     .hero-title {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(3rem, 6vw, 5.5rem);
-      font-weight: 900; line-height: 1.0;
-      margin-bottom: 1rem; position: relative; z-index: 1;
+      font-size: clamp(3rem, 6vw, 6rem); font-weight: 900; line-height: 1.0; margin-bottom: 0.5rem;
     }
-
     .hero-title-cn {
       font-family: 'Noto Serif SC', serif;
-      font-size: clamp(1.5rem, 3vw, 2.5rem);
-      font-weight: 400; color: var(--gray);
-      margin-bottom: 2rem; position: relative; z-index: 1;
+      font-size: 1.2rem; font-weight: 300; color: var(--gray); margin-bottom: 2.5rem;
     }
-
-    .hero-desc {
-      font-size: 0.95rem; color: var(--gray);
-      max-width: 440px; margin-bottom: 2.5rem;
-      line-height: 1.8; position: relative; z-index: 1;
-    }
-
+    .hero-divider { width: 60px; height: 4px; background: var(--black); margin-bottom: 2rem; }
+    .hero-desc { font-size: 0.92rem; color: var(--gray); max-width: 440px; line-height: 1.9; margin-bottom: 2.5rem; }
     .hero-cta {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      background: var(--black); color: var(--white);
-      padding: 0.8rem 2rem;
-      font-size: 0.72rem; font-weight: 700;
-      letter-spacing: 0.15em; text-transform: uppercase;
-      text-decoration: none; border: none; cursor: pointer;
-      transition: all 0.2s; position: relative; z-index: 1;
-      width: fit-content;
+      display: inline-flex; align-items: center; gap: 0.8rem;
+      background: var(--black); color: var(--white); padding: 0.8rem 2rem;
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+      text-decoration: none; border: none; cursor: pointer; transition: all 0.2s; width: fit-content;
     }
     .hero-cta:hover { background: var(--red); }
-
     .hero-right {
-      position: relative; display: flex;
-      align-items: center; justify-content: center;
-      background: var(--black); overflow: hidden;
+      background: var(--black); position: relative;
+      display: flex; align-items: center; justify-content: center; overflow: hidden;
     }
-
+    .hero-right::before {
+      content: ''; position: absolute; bottom: 0; right: 0;
+      width: 0; height: 0;
+      border-style: solid; border-width: 0 0 60px 60px;
+      border-color: transparent transparent var(--red) transparent;
+    }
+    .hero-letter-grid {
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      display: grid; grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(5, 1fr); pointer-events: none;
+    }
+    .hero-letter-grid span {
+      border: 1px solid rgba(255,255,255,0.04);
+      font-size: 0.55rem; color: rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: center;
+    }
     .hero-font-stack {
-      position: relative; z-index: 1;
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      gap: 0.5rem; padding: 3rem;
-      text-align: center;
+      position: relative; z-index: 1; display: flex; flex-direction: column;
+      align-items: flex-start; padding: 3rem; gap: 0.4rem;
     }
-
     .hero-font-line {
-      font-size: clamp(2.5rem, 6vw, 5rem);
-      line-height: 1.1; color: var(--white);
-      opacity: 0; animation: fadeUp 0.8s ease forwards;
+      font-size: clamp(2.2rem, 5vw, 5rem); line-height: 1.1; color: var(--white);
+      opacity: 0; animation: fadeUp 0.7s ease forwards;
     }
-    .hero-font-line:nth-child(1) { animation-delay: 0.15s; font-family: 'EB Garamond', serif; font-style: italic; }
-    .hero-font-line:nth-child(2) { animation-delay: 0.35s; color: var(--yellow); font-family: 'Playfair Display', serif; font-weight: 700; }
-    .hero-font-line:nth-child(3) { animation-delay: 0.55s; color: var(--gray); font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.8rem, 4vw, 3rem); }
-    .hero-font-line:nth-child(4) { animation-delay: 0.75s; color: rgba(255,255,255,0.3); font-family: 'Courier Prime', monospace; font-size: clamp(1rem, 2vw, 1.5rem); }
-
+    .hero-font-line:nth-child(1) { animation-delay: 0.15s; font-family: var(--garamond); font-style: italic; }
+    .hero-font-line:nth-child(2) { animation-delay: 0.35s; color: var(--yellow); font-family: var(--modern); font-weight: 900; }
+    .hero-font-line:nth-child(3) { animation-delay: 0.55s; color: rgba(255,255,255,0.3); font-family: var(--geo); font-size: clamp(1.6rem, 3vw, 3rem); }
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    .hero-geo {
-      position: absolute;
-      border: 3px solid; border-radius: 50%;
-    }
-    .hero-geo-1 { width: 220px; height: 220px; border-color: var(--red); top: 8%; right: 8%; opacity: 0.3; }
-    .hero-geo-2 { width: 120px; height: 120px; background: var(--yellow); bottom: 15%; left: 5%; border-radius: 0; opacity: 0.5; }
-    .hero-geo-3 { width: 160px; height: 160px; border-color: rgba(255,255,255,0.15); bottom: 5%; right: 15%; }
-
-    /* ========================================
-       SECTION HEADER
-    ======================================== */
+    /* SECTION HEADER */
     .section-header {
-      padding: 5rem 3rem 3rem;
-      border-bottom: 3px solid var(--black);
-      display: grid; grid-template-columns: auto 1fr;
-      align-items: end; gap: 2rem;
+      padding: 5rem 3.5rem 3rem; border-bottom: 3px solid var(--black);
+      display: grid; grid-template-columns: auto 1fr; align-items: end; gap: 2.5rem; position: relative;
     }
-
+    .section-header::after {
+      content: ''; position: absolute; bottom: -3px; left: 0; width: 80px; height: 3px; background: var(--red);
+    }
     .section-number {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 5rem; font-weight: 700; line-height: 1;
-      color: var(--yellow); -webkit-text-stroke: 2px var(--black);
+      font-size: 5rem; font-weight: 900; line-height: 1; color: var(--white);
+      -webkit-text-stroke: 2px var(--black); text-shadow: 3px 3px 0 var(--yellow);
     }
-
-    .section-title-group {
-      border-bottom: 3px solid var(--black); padding-bottom: 1.5rem;
-    }
-
+    .section-title-group { padding-bottom: 1.5rem; }
     .section-title {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(1.8rem, 3vw, 3rem);
-      font-weight: 700; line-height: 1.1; margin-bottom: 0.3rem;
+      font-size: clamp(1.8rem, 3vw, 3rem); font-weight: 700; line-height: 1.1; margin-bottom: 0.3rem;
     }
+    .section-subtitle { font-family: var(--garamond); font-size: 0.85rem; font-style: italic; color: var(--gray); }
 
-    .section-subtitle {
-      font-family: 'EB Garamond', serif;
-      font-size: 0.9rem; font-style: italic; color: var(--gray);
-    }
-
-    /* ========================================
-       CATEGORY GRID
-    ======================================== */
+    /* CATEGORY CARDS */
     .category-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      display: grid; grid-template-columns: repeat(3, 1fr);
       border-bottom: 3px solid var(--black);
     }
-
     .category-card {
-      border-right: 3px solid var(--black);
-      padding: 2.5rem 2rem;
-      position: relative; overflow: hidden; cursor: pointer;
-      transition: background 0.3s;
+      border-right: 3px solid var(--black); padding: 2.5rem 2rem;
+      position: relative; overflow: hidden; cursor: pointer; transition: background 0.25s;
     }
     .category-card:last-child { border-right: none; }
-    .category-card:hover { background: var(--light-gray); }
-    .category-card::before {
-      content: ''; position: absolute; top: 0; left: 0;
-      width: 5px; height: 0; background: var(--red); transition: height 0.3s;
+    .category-card:hover { background: var(--lgray); }
+    .card-geo-bar {
+      position: absolute; top: 0; left: 0; width: 0; height: 4px;
+      background: var(--red); transition: width 0.3s;
     }
-    .category-card:hover::before { height: 100%; }
-
-    .card-icon {
-      width: 44px; height: 44px; margin-bottom: 1.5rem;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .card-icon svg { width: 100%; height: 100%; }
-
+    .category-card:hover .card-geo-bar { width: 100%; }
+    .card-number { font-size: 2.5rem; font-weight: 900; color: var(--yellow); line-height: 1; margin-bottom: 1.5rem; }
     .card-label {
-      font-size: 0.62rem; font-weight: 700;
-      letter-spacing: 0.2em; text-transform: uppercase; color: var(--red);
+      font-size: 0.6rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red);
       margin-bottom: 0.5rem;
     }
+    .card-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .card-title-en { font-family: var(--garamond); font-size: 0.8rem; font-style: italic; color: var(--gray); margin-bottom: 1rem; }
+    .card-desc { font-size: 0.82rem; color: var(--gray); line-height: 1.65; }
 
-    .card-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem; font-weight: 700; margin-bottom: 0.3rem;
-    }
-
-    .card-title-en {
-      font-family: 'EB Garamond', serif;
-      font-size: 0.85rem; font-style: italic; color: var(--gray);
-      margin-bottom: 1rem;
-    }
-
-    .card-desc { font-size: 0.83rem; color: var(--gray); line-height: 1.6; }
-
-    /* ========================================
-       FONT DETAIL BLOCKS
-    ======================================== */
+    /* FONT DETAIL BLOCKS */
     .font-section { border-bottom: 3px solid var(--black); }
-
     .font-block {
       display: grid; grid-template-columns: 1fr 1fr;
-      border-bottom: 1px solid var(--light-gray);
+      border-bottom: 1px solid var(--lgray);
     }
     .font-block:last-child { border-bottom: none; }
-
-    .font-info {
-      padding: 3rem 2.5rem;
-      border-right: 1px solid var(--light-gray);
-    }
-
+    .font-info { padding: 3.5rem 3rem; border-right: 1px solid var(--lgray); }
     .font-family-tag {
-      display: inline-block;
-      font-size: 0.62rem; font-weight: 700;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      background: var(--black); color: var(--white);
-      padding: 0.2rem 0.7rem; margin-bottom: 1rem;
+      display: inline-block; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+      background: var(--black); color: var(--white); padding: 0.2rem 0.7rem; margin-bottom: 1rem;
     }
-
-    .font-name {
-      font-size: 2rem; font-weight: 700; margin-bottom: 0.2rem;
-    }
-
-    .font-name-en {
-      font-family: 'EB Garamond', serif;
-      font-size: 1rem; font-style: italic; color: var(--gray);
-      margin-bottom: 1.5rem;
-    }
-
-    .font-meta {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 1rem 2rem; margin-bottom: 2rem;
-    }
-
-    .meta-item {
-      padding: 0.8rem 1rem;
-      border-left: 3px solid var(--yellow);
-      background: rgba(244, 211, 94, 0.05);
-    }
-
-    .meta-label {
-      font-size: 0.58rem; font-weight: 700;
-      letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray);
-      margin-bottom: 0.25rem;
-    }
-
-    .meta-value { font-size: 0.88rem; font-weight: 700; }
-
-    .font-desc { font-size: 0.88rem; color: var(--gray); line-height: 1.8; margin-bottom: 1.5rem; }
-
+    .font-name { font-size: 2.2rem; font-weight: 700; margin-bottom: 0.2rem; }
+    .font-name-en { font-family: var(--garamond); font-size: 1rem; font-style: italic; color: var(--gray); margin-bottom: 1.5rem; }
+    .font-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem 2rem; margin-bottom: 1.5rem; }
+    .meta-item { padding: 0.8rem 1rem; border-left: 3px solid var(--yellow); background: rgba(244,211,94,0.06); }
+    .meta-label { font-size: 0.55rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray); margin-bottom: 0.2rem; }
+    .meta-value { font-size: 0.85rem; font-weight: 700; }
+    .font-desc { font-size: 0.88rem; color: var(--gray); line-height: 1.85; margin-bottom: 1.5rem; }
     .font-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
     .font-tag {
-      font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em;
-      text-transform: uppercase; border: 1.5px solid var(--black);
-      padding: 0.2rem 0.55rem;
+      font-size: 0.58rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      border: 1.5px solid var(--black); padding: 0.2rem 0.55rem;
     }
-
     .font-preview {
-      padding: 3rem 2.5rem;
-      display: flex; flex-direction: column; justify-content: center;
-      min-height: 300px;
+      padding: 3.5rem 3rem; display: flex; flex-direction: column; justify-content: center;
+      min-height: 320px; position: relative;
     }
-
     .preview-label {
-      font-size: 0.58rem; font-weight: 700;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--gray); margin-bottom: 1rem;
+      font-size: 0.58rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+      color: rgba(0,0,0,0.3); margin-bottom: 1rem;
     }
+    .preview-sample { font-size: clamp(1.8rem, 3vw, 3.2rem); line-height: 1.2; margin-bottom: 1.2rem; }
+    .preview-sample-en { font-size: clamp(0.95rem, 1.6vw, 1.5rem); font-style: italic; color: var(--gray); line-height: 1.4; }
+    .preview-alphabet { font-size: 0.7rem; letter-spacing: 0.2em; margin-top: auto; opacity: 0.25; }
 
-    .preview-sample {
-      font-size: clamp(1.8rem, 3.5vw, 3.2rem);
-      line-height: 1.2; margin-bottom: 1.2rem;
-    }
-
-    .preview-sample-en {
-      font-size: clamp(1rem, 1.8vw, 1.6rem);
-      font-style: italic; color: var(--gray); line-height: 1.4;
-    }
-
-    .preview-alphabet {
-      font-size: 0.75rem; color: rgba(0,0,0,0.2);
-      letter-spacing: 0.25em; margin-top: auto;
-      font-family: inherit;
-    }
-
-    /* ========================================
-       FONT COMPARISON TOOL
-    ======================================== */
+    /* COMPARISON */
     .comparison-section { border-bottom: 3px solid var(--black); }
-
     .compare-header {
-      padding: 5rem 3rem 2rem;
-      border-bottom: 3px solid var(--black);
+      padding: 5rem 3.5rem 2.5rem; border-bottom: 3px solid var(--black); position: relative;
     }
-
-    .compare-instructions {
-      margin-top: 1rem; font-size: 0.88rem; color: var(--gray);
-      max-width: 620px; line-height: 1.7;
-    }
-
+    .compare-header::after { content: ''; position: absolute; bottom: -3px; left: 3.5rem; width: 60px; height: 3px; background: var(--red); }
+    .compare-instructions { margin-top: 1rem; font-size: 0.88rem; color: var(--gray); max-width: 620px; line-height: 1.7; }
     .compare-controls {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      align-items: center;
-      padding: 2rem 3rem;
-      border-bottom: 3px solid var(--black); gap: 1rem;
+      display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
+      padding: 2rem 3.5rem; border-bottom: 3px solid var(--black); gap: 1.5rem;
     }
-
     .font-selector { display: flex; flex-direction: column; gap: 0.5rem; }
     .selector-label {
-      font-size: 0.62rem; font-weight: 700;
-      letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray);
+      font-size: 0.6rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray);
     }
-
     .font-select {
-      font-size: 0.95rem; padding: 0.7rem 1rem;
-      border: 2px solid var(--black); background: var(--white);
+      font-size: 0.95rem; padding: 0.7rem 1rem; border: 2px solid var(--black); background: var(--white);
       cursor: pointer; appearance: none;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M1 3l5 5 5-5' stroke='%231a1a1a' stroke-width='2' fill='none'/%3E%3C/svg%3E");
-      background-repeat: no-repeat; background-position: right 1rem center;
-      padding-right: 2.5rem;
+      background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem;
     }
     .font-select:focus { outline: none; border-color: var(--red); }
-
     .compare-vs {
-      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; color: var(--gray); text-align: center;
+      font-size: 0.7rem; font-weight: 900; letter-spacing: 0.15em; color: var(--gray); text-align: center;
+      width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;
+      border: 2px solid var(--black); background: var(--yellow);
     }
-
-    .compare-preview-area { padding: 3rem; }
-
+    .compare-preview-area { padding: 3rem 3.5rem; }
     .compare-text-input {
-      width: 100%; font-size: 1.4rem;
-      padding: 1rem 1.5rem;
-      border: 2px solid var(--black); margin-bottom: 2rem;
-      font-family: 'Space Grotesk', sans-serif;
+      width: 100%; font-size: 1.3rem; padding: 1rem 1.5rem;
+      border: 2px solid var(--black); margin-bottom: 1.5rem; font-family: var(--geo);
     }
     .compare-text-input:focus { outline: none; border-color: var(--red); }
-
-    .compare-panels { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--black); }
-
+    .compare-panels { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--black); border: 2px solid var(--black); }
     .compare-panel { background: var(--white); padding: 2.5rem; min-height: 280px; }
+    .panel-font-label { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--red); margin-bottom: 1rem; }
+    .panel-sample { font-size: clamp(1.4rem, 2.5vw, 2.6rem); line-height: 1.3; word-break: break-all; }
+    .panel-en-sample { font-size: clamp(0.85rem, 1.3vw, 1.3rem); font-style: italic; color: var(--gray); margin-top: 1rem; }
 
-    .panel-font-label {
-      font-size: 0.62rem; font-weight: 700;
-      letter-spacing: 0.15em; text-transform: uppercase;
-      color: var(--red); margin-bottom: 1rem;
-    }
-
-    .panel-sample { font-size: clamp(1.6rem, 2.8vw, 2.8rem); line-height: 1.3; word-break: break-all; }
-    .panel-en-sample {
-      font-size: clamp(0.95rem, 1.5vw, 1.4rem);
-      font-style: italic; color: var(--gray); margin-top: 1rem;
-    }
-
-    /* ========================================
-       FONT FAMILY TREE
-    ======================================== */
-    .tree-section { padding: 5rem 3rem; border-bottom: 3px solid var(--black); overflow-x: auto; }
-
-    .tree-container { min-width: 800px; }
-
+    /* FAMILY TREE */
+    .tree-section { padding: 5rem 3.5rem; border-bottom: 3px solid var(--black); overflow-x: auto; }
+    .tree-container { min-width: 700px; }
     .tree-label {
-      font-size: 0.6rem; font-weight: 700;
-      letter-spacing: 0.15em; text-transform: uppercase;
+      font-size: 0.58rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;
       color: var(--gray); text-align: center; margin: 2rem 0 1rem;
     }
-
     .tree-row { display: flex; align-items: center; justify-content: center; gap: 0; margin-bottom: 0.5rem; }
-
     .tree-node {
-      padding: 0.7rem 1.4rem; border: 2px solid var(--black);
-      font-size: 0.82rem; font-weight: 700;
-      min-width: 110px; text-align: center;
-      position: relative; cursor: pointer; transition: all 0.2s;
+      padding: 0.7rem 1.2rem; border: 2px solid var(--black);
+      font-size: 0.78rem; font-weight: 700; min-width: 100px; text-align: center;
+      cursor: pointer; transition: all 0.2s;
     }
     .tree-node:hover { background: var(--black); color: var(--white); }
-
     .tree-node.serif { border-color: var(--blue); color: var(--blue); }
     .tree-node.sans { border-color: var(--red); color: var(--red); }
     .tree-node.slab { border-color: #7B2D8B; color: #7B2D8B; }
     .tree-node.script { border-color: var(--yellow); color: var(--black); background: rgba(244,211,94,0.15); }
-    .tree-node.blackletter { border-color: #8B4513; color: #8B4513; }
+    .tree-branch { display: flex; gap: 0.5rem; justify-content: center; margin-top: 0.5rem; }
+    .tree-branch .tree-node { font-size: 0.65rem; min-width: 85px; padding: 0.4rem 0.6rem; }
 
-    .tree-branch {
-      display: flex; gap: 0.5rem; justify-content: center;
-      margin-top: 0.5rem; padding-left: 1.5rem;
-    }
-    .tree-branch .tree-node {
-      font-size: 0.68rem; min-width: 95px; padding: 0.45rem 0.8rem;
-    }
-
-    /* ========================================
-       FOOTER
-    ======================================== */
-    footer {
-      background: var(--black); color: var(--white);
-      padding: 4rem 3rem 2rem;
-    }
-
+    /* FOOTER */
+    footer { background: var(--black); color: var(--white); padding: 4rem 3.5rem 2rem; }
     .footer-grid {
       display: grid; grid-template-columns: 2fr 1fr 1fr;
       gap: 3rem; margin-bottom: 3rem;
-      border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 3rem;
     }
-
-    .footer-brand {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem;
-    }
-
-    .footer-tagline { font-size: 0.78rem; font-style: italic; color: rgba(255,255,255,0.4); }
-
+    .footer-brand { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .footer-tagline { font-size: 0.75rem; font-style: italic; color: rgba(255,255,255,0.35); }
     .footer-col-title {
-      font-size: 0.62rem; font-weight: 700; letter-spacing: 0.2em;
-      text-transform: uppercase; color: var(--yellow); margin-bottom: 1rem;
+      font-size: 0.6rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--yellow); margin-bottom: 1rem;
     }
-
     .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
-    .footer-links a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.83rem; transition: color 0.2s; }
+    .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.83rem; transition: color 0.2s; }
     .footer-links a:hover { color: var(--white); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; font-size: 0.65rem; color: rgba(255,255,255,0.25); }
 
-    .footer-bottom {
-      display: flex; justify-content: space-between; align-items: center;
-      font-size: 0.68rem; color: rgba(255,255,255,0.3);
-    }
-
-    /* ========================================
-       RESPONSIVE
-    ======================================== */
+    /* RESPONSIVE */
     @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; }
-      .hero-left { border-right: none; border-bottom: 3px solid var(--black); min-height: 50vh; }
-      .hero-right { min-height: 35vh; }
+      .hero-left { border-right: none; border-bottom: 3px solid var(--black); min-height: 55vh; }
+      .hero-right { min-height: 40vh; }
+      .category-grid { grid-template-columns: 1fr 1fr; }
       .font-block { grid-template-columns: 1fr; }
-      .font-info { border-right: none; border-bottom: 1px solid var(--light-gray); }
+      .font-info { border-right: none; border-bottom: 1px solid var(--lgray); }
       .compare-panels { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
       .nav-links { display: none; }
       .compare-controls { grid-template-columns: 1fr; }
       .compare-vs { display: none; }
+      .sidebar-nav { display: none; }
     }
 
-    /* ========================================
-       SCROLL REVEAL
-    ======================================== */
-    .reveal { opacity: 0; transform: translateY(25px); transition: all 0.6s ease; }
+    /* SCROLL REVEAL */
+    .reveal { opacity: 0; transform: translateY(25px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    /* ========================================
-       SCROLLBAR
-    ======================================== */
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: var(--light-gray); }
+    /* SCROLLBAR */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--lgray); }
     ::-webkit-scrollbar-thumb { background: var(--black); }
   </style>
 </head>
@@ -541,29 +349,42 @@
       <li><a href="#compare">Compare</a></li>
       <li><a href="#tree">Family Tree</a></li>
     </ul>
-    <button class="lang-toggle" id="langToggle">EN / 中文</button>
+    <button class="lang-btn" id="langToggle" style="font-family:'Space Grotesk',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.1em;border:2px solid #1a1a1a;background:transparent;padding:0.25rem 0.8rem;cursor:pointer;">中文 / EN</button>
+  </nav>
+
+  <!-- SIDEBAR NAV -->
+  <nav class="sidebar-nav" aria-label="Section navigation">
+    <a href="#home" data-label="Home" class="active"></a>
+    <a href="#categories" data-label="Categories"></a>
+    <a href="#compare" data-label="Compare"></a>
+    <a href="#tree" data-label="Tree"></a>
   </nav>
 
   <!-- HERO -->
   <section class="hero" id="home">
     <div class="hero-left">
+      <div class="hero-geo-1"></div>
+      <div class="hero-geo-2"></div>
+      <div class="hero-geo-3"></div>
       <div class="hero-eyebrow">The Art of Letters — A Visual Guide</div>
       <h1 class="hero-title">Type<br>Museum</h1>
       <p class="hero-title-cn">英文字体博物馆</p>
-      <p class="hero-desc">
-        Every typeface has a soul. From the humanist warmth of Garamond to the geometric precision of Futura, each letterform carries centuries of craft, culture, and intention. This is a visual journey through the world's most iconic typefaces.
-      </p>
+      <div class="hero-divider"></div>
+      <p class="hero-desc">Every typeface has a soul. From the humanist warmth of Garamond to the geometric precision of Futura, each letterform carries centuries of craft, culture, and intention.</p>
       <a href="#categories" class="hero-cta">Explore the Collection →</a>
     </div>
     <div class="hero-right">
+      <div class="hero-letter-grid">
+        <span>Aa</span><span>Bb</span><span>Cc</span><span>Dd</span><span>Ee</span>
+        <span>Ff</span><span>Gg</span><span>Hh</span><span>Ii</span><span>Jj</span>
+        <span>Kk</span><span>Ll</span><span>Mm</span><span>Nn</span><span>Oo</span>
+        <span>Pp</span><span>Qq</span><span>Rr</span><span>Ss</span><span>Tt</span>
+        <span>Uu</span><span>Vv</span><span>Ww</span><span>Xx</span><span>Yy</span>
+      </div>
       <div class="hero-font-stack">
-        <div class="hero-font-line">Gar mond</div>
+        <div class="hero-font-line">Garamond</div>
         <div class="hero-font-line">Bodoni</div>
         <div class="hero-font-line">Helvetica</div>
-        <div class="hero-font-line">Courier Prime</div>
-        <div class="hero-geo hero-geo-1"></div>
-        <div class="hero-geo hero-geo-2"></div>
-        <div class="hero-geo hero-geo-3"></div>
       </div>
     </div>
   </section>
@@ -574,69 +395,57 @@
       <div class="section-number">01</div>
       <div class="section-title-group">
         <h2 class="section-title">Type Categories</h2>
-        <p class="section-subtitle">Understanding the Typographic Landscape · 字体的版图</p>
+        <p class="section-subtitle">Understanding the Typographic Landscape</p>
       </div>
     </div>
-
     <div class="category-grid">
       <div class="category-card reveal">
-        <div class="card-icon">
-          <svg viewBox="0 0 44 44" fill="none"><rect x="4" y="8" width="36" height="28" stroke="#1D3557" stroke-width="2"/><line x1="10" y1="16" x2="34" y2="16" stroke="#1D3557" stroke-width="2"/><line x1="10" y1="22" x2="34" y2="22" stroke="#1D3557" stroke-width="2"/><line x1="10" y1="28" x2="26" y2="28" stroke="#1D3557" stroke-width="2"/></svg>
-        </div>
-        <div class="card-label">Serif</div>
-        <h3 class="card-title">Old Style</h3>
-        <p class="card-title-en">Garamond · Caslon · Jenson</p>
-        <p class="card-desc">The earliest humanist serifs, inspired by Renaissance calligraphy. Warm, organic strokes with a gentle, pen-drawn quality. Perfect for long-form reading.</p>
+        <div class="card-geo-bar"></div>
+        <div class="card-number">001</div>
+        <div class="card-label">Serif · Old Style</div>
+        <h3 class="card-title">Garamond</h3>
+        <p class="card-title-en">Claude Garamond · 1540</p>
+        <p class="card-desc">The earliest humanist serifs, inspired by Renaissance calligraphy. Warm, organic strokes. Perfect for long-form reading.</p>
       </div>
-
       <div class="category-card reveal">
-        <div class="card-icon">
-          <svg viewBox="0 0 44 44" fill="none"><rect x="4" y="8" width="36" height="28" stroke="#1D3557" stroke-width="2.5"/><line x1="10" y1="16" x2="34" y2="16" stroke="#1D3557" stroke-width="2"/><line x1="10" y1="22" x2="34" y2="22" stroke="#1D3557" stroke-width="2"/><line x1="10" y1="28" x2="26" y2="28" stroke="#1D3557" stroke-width="2"/></svg>
-        </div>
-        <div class="card-label">Serif</div>
-        <h3 class="card-title">Transitional</h3>
-        <p class="card-title-en">Baskerville · Times New Roman · Georgia</p>
-        <p class="card-desc">The bridge between old and modern. Sharper contrast, more precise geometry, and a refined authority that suits both print and screen.</p>
+        <div class="card-geo-bar"></div>
+        <div class="card-number">002</div>
+        <div class="card-label">Serif · Transitional</div>
+        <h3 class="card-title">Baskerville</h3>
+        <p class="card-title-en">John Baskerville · 1757</p>
+        <p class="card-desc">The bridge between old and modern. Sharper contrast, refined authority. Used by Apple as the default screen serif.</p>
       </div>
-
       <div class="category-card reveal">
-        <div class="card-icon">
-          <svg viewBox="0 0 44 44" fill="none"><path d="M4 20 Q22 4 40 20 Q22 36 4 20Z" stroke="#E63946" stroke-width="2" fill="none"/><line x1="10" y1="20" x2="34" y2="20" stroke="#E63946" stroke-width="1.5"/></svg>
-        </div>
-        <div class="card-label">Serif</div>
-        <h3 class="card-title">Modern / Didone</h3>
-        <p class="card-title-en">Bodoni · Didot · Futura*</p>
-        <p class="card-desc">Extreme contrast between thick and thin strokes. Hairline serifs, dramatic drama. Commands attention in headlines, struggles in body text.</p>
+        <div class="card-geo-bar"></div>
+        <div class="card-number">003</div>
+        <div class="card-label">Serif · Modern</div>
+        <h3 class="card-title">Bodoni</h3>
+        <p class="card-title-en">Giambattista Bodoni · 1798</p>
+        <p class="card-desc">Extreme contrast, hairline serifs. Commands attention in headlines. The typeface of fashion and luxury.</p>
       </div>
-
       <div class="category-card reveal">
-        <div class="card-icon">
-          <svg viewBox="0 0 44 44" fill="none"><rect x="4" y="10" width="36" height="24" stroke="#6c757d" stroke-width="3"/><line x1="10" y1="16" x2="34" y2="16" stroke="#6c757d" stroke-width="2"/><line x1="10" y1="22" x2="34" y2="22" stroke="#6c757d" stroke-width="2"/><line x1="10" y1="28" x2="28" y2="28" stroke="#6c757d" stroke-width="2"/></svg>
-        </div>
-        <div class="card-label">Serif</div>
-        <h3 class="card-title">Slab Serif</h3>
-        <p class="card-title-en">Rockwell · Courier · Archer</p>
-        <p class="card-desc">Bold, rectangular serifs with a mechanical, industrial character. Evokes the typewriter era, poster printing, and vintage Americana.</p>
-      </div>
-
-      <div class="category-card reveal">
-        <div class="card-icon">
-          <svg viewBox="0 0 44 44" fill="none"><rect x="4" y="10" width="36" height="24" stroke="#E63946" stroke-width="2"/><line x1="10" y1="16" x2="34" y2="16" stroke="#E63946" stroke-width="2"/><line x1="10" y1="22" x2="34" y2="22" stroke="#E63946" stroke-width="2"/><line x1="10" y1="28" x2="28" y2="28" stroke="#E63946" stroke-width="2"/></svg>
-        </div>
+        <div class="card-geo-bar"></div>
+        <div class="card-number">004</div>
         <div class="card-label">Sans-Serif</div>
-        <h3 class="card-title">Geometric</h3>
-        <p class="card-title-en">Futura · Avant Garde · Circular</p>
-        <p class="card-desc">Built from pure geometric forms — circles, triangles, straight lines. Clean, modern, and architecturally precise. The Bauhaus spirit in letterform.</p>
+        <h3 class="card-title">Helvetica</h3>
+        <p class="card-title-en">Miedinger & Hoffmann · 1957</p>
+        <p class="card-desc">The world's most famous typeface. Swiss precision, corporate neutrality. Used by NYC Subway, BMW, American Airlines.</p>
       </div>
-
       <div class="category-card reveal">
-        <div class="card-icon">
-          <svg viewBox="0 0 44 44" fill="none"><path d="M8 32 Q14 8 22 20 Q30 32 36 8" stroke="#1D3557" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
-        </div>
-        <div class="card-label">Script & Blackletter</div>
-        <h3 class="card-title">Expressive</h3>
-        <p class="card-title-en">Lobster · Garamond Italic · Blackletter</p>
-        <p class="card-desc">The most human of all typefaces. Mimics handwriting, calligraphy, and brushwork. Beautiful in headlines, unreadable in body text.</p>
+        <div class="card-geo-bar"></div>
+        <div class="card-number">005</div>
+        <div class="card-label">Sans-Serif · Geometric</div>
+        <h3 class="card-title">Futura</h3>
+        <p class="card-title-en">Paul Renner · 1927</p>
+        <p class="card-desc">Built from pure geometry — circles, triangles, squares. The Bauhaus spirit in letterform. Used by Volkswagen.</p>
+      </div>
+      <div class="category-card reveal">
+        <div class="card-geo-bar"></div>
+        <div class="card-number">006</div>
+        <div class="card-label">Slab Serif · Script</div>
+        <h3 class="card-title">Courier / Lobster</h3>
+        <p class="card-title-en">Adrian Frutiger · Pablo Impallari</p>
+        <p class="card-desc">Typewriter authenticity meets casual handwriting. Monospace precision or brush-like warmth — each for a different mood.</p>
       </div>
     </div>
   </section>
@@ -651,95 +460,47 @@
       </div>
     </div>
 
-    <!-- Garamond -->
     <div class="font-block reveal">
       <div class="font-info">
         <span class="font-family-tag">Old Style · Humanist</span>
-        <h3 class="font-name" style="font-family: var(--font-garamond)">Garamond</h3>
-        <p class="font-name-en" style="font-family: var(--font-garamond)">Claude Garamond · 1540</p>
+        <h3 class="font-name" style="font-family: var(--garamond)">Garamond</h3>
+        <p class="font-name-en" style="font-family: var(--garamond)">Claude Garamond · 1540</p>
         <div class="font-meta">
-          <div class="meta-item">
-            <div class="meta-label">Designer</div>
-            <div class="meta-value">Claude Garamond</div>
-          </div>
-          <div class="meta-item">
-            <div class="meta-label">Era</div>
-            <div class="meta-value">Renaissance · 1540</div>
-          </div>
-          <div class="meta-item">
-            <div class="meta-label">Mood</div>
-            <div class="meta-value">Warm · Scholarly · Timeless</div>
-          </div>
-          <div class="meta-item">
-            <div class="meta-label">Used By</div>
-            <div class="meta-value">Penguin Books · Yale UP</div>
-          </div>
+          <div class="meta-item"><div class="meta-label">Designer</div><div class="meta-value">Claude Garamond</div></div>
+          <div class="meta-item"><div class="meta-label">Era</div><div class="meta-value">Renaissance · 1540</div></div>
+          <div class="meta-item"><div class="meta-label">Mood</div><div class="meta-value">Warm · Scholarly · Timeless</div></div>
+          <div class="meta-item"><div class="meta-label">Used By</div><div class="meta-value">Penguin Books · Yale UP</div></div>
         </div>
-        <p class="font-desc">
-          Garamond is perhaps the most beloved typeface in the world. Designed by French punchcutter Claude Garamond in the 1540s, it draws directly from the pen strokes of Renaissance scribes. Its gentle contrast, slightly inclined axis, and open counters make it supremely readable at any size. The British publisher Penguin Books adopted it as their house typeface in 1935 — a decision so right that it defined the brand for decades.
-        </p>
-        <div class="font-tags">
-          <span class="font-tag">Book Typography</span>
-          <span class="font-tag">Long-form</span>
-          <span class="font-tag">Elegant</span>
-          <span class="font-tag">Classic</span>
-        </div>
+        <p class="font-desc">Garamond is perhaps the most beloved typeface in the world. Designed by French punchcutter Claude Garamond in the 1540s, it draws directly from the pen strokes of Renaissance scribes. Its gentle contrast, slightly inclined axis, and open counters make it supremely readable at any size. Penguin Books adopted it in 1935 — a decision so right that it defined the brand for decades.</p>
+        <div class="font-tags"><span class="font-tag">Book Typography</span><span class="font-tag">Long-form</span><span class="font-tag">Elegant</span><span class="font-tag">Classic</span></div>
       </div>
       <div class="font-preview" style="background: #faf7f2;">
         <div class="preview-label">Specimen</div>
-        <div class="preview-sample" style="font-family: var(--font-garamond); color: var(--black);">
-          The Art<br>of Letters
-        </div>
-        <div class="preview-sample-en" style="font-family: var(--font-garamond); font-style: italic; color: #555;">
-          "Type is a beautiful group of letters, not a group of beautiful letters." — Matthew Carter
-        </div>
-        <div class="preview-alphabet" style="font-family: var(--font-garamond);">Aa Bb Cc Dd EeFf Gg Hh IiJj Kk Ll MmNn Oo Pp QqRr Ss TtUu Vv Ww XxYy Zz</div>
+        <div class="preview-sample" style="font-family: var(--garamond); color: var(--black);">The Art<br>of Letters</div>
+        <div class="preview-sample-en" style="font-family: var(--garamond); color: #555;">"Type is a beautiful group of letters, not a group of beautiful letters." — Matthew Carter</div>
+        <div class="preview-alphabet" style="font-family: var(--garamond);">Aa Bb Cc Dd EeFf Gg Hh IiJj Kk Ll MmNn Oo Pp QqRr Ss TtUu Vv Ww XxYy Zz 012345</div>
       </div>
     </div>
 
-    <!-- Caslon -->
     <div class="font-block reveal">
       <div class="font-info">
         <span class="font-family-tag">Old Style · English</span>
-        <h3 class="font-name" style="font-family: var(--font-caslon)">Caslon</h3>
-        <p class="font-name-en" style="font-family: var(--font-caslon)">William Caslon · 1722</p>
+        <h3 class="font-name" style="font-family: var(--caslon)">Caslon</h3>
+        <p class="font-name-en" style="font-family: var(--caslon)">William Caslon · 1722</p>
         <div class="font-meta">
-          <div class="meta-item">
-            <div class="meta-label">Designer</div>
-            <div class="meta-value">William Caslon</div>
-          </div>
-          <div class="meta-item">
-            <div class="meta-label">Era</div>
-            <div class="meta-value">Baroque · 1722</div>
-          </div>
-          <div class="meta-item">
-            <div class="meta-label">Mood</div>
-            <div class="meta-value">British · Solid · Historic</div>
-          </div>
-          <div class="meta-item">
-            <div class="meta-label">Used By</div>
-            <div class="meta-value">The Economist · Vintage posters</div>
-          </div>
+          <div class="meta-item"><div class="meta-label">Designer</div><div class="meta-value">William Caslon</div></div>
+          <div class="meta-item"><div class="meta-label">Era</div><div class="meta-value">Baroque · 1722</div></div>
+          <div class="meta-item"><div class="meta-label">Mood</div><div class="meta-value">British · Solid · Historic</div></div>
+          <div class="meta-item"><div class="meta-label">Used By</div><div class="meta-value">The Economist · Vintage posters</div></div>
         </div>
-        <p class="font-desc">
-          William Caslon's typeface was born in a London foundry in 1722, originally created for a Bible printer. By the 1730s, it had become the standard typeface of English printing — so dominant that the American Declaration of Independence was reportedly printed in Caslon. Its sturdy, slightly irregular character gives text a tactile, almost handmade quality that still feels alive today.
-        </p>
-        <div class="font-tags">
-          <span class="font-tag">British Typography</span>
-          <span class="font-tag">Books</span>
-          <span class="font-tag">Historical</span>
-          <span class="font-tag">Print</span>
-        </div>
+        <p class="font-desc">William Caslon's typeface was born in a London foundry in 1722, originally created for a Bible printer. By the 1730s it had become the standard typeface of English printing — so dominant that the American Declaration of Independence was reportedly printed in Caslon. Its sturdy, slightly irregular character gives text a tactile, almost handmade quality that still feels alive today.</p>
+        <div class="font-tags"><span class="font-tag">British Typography</span><span class="font-tag">Books</span><span class="font-tag">Historical</span><span class="font-tag">Print</span></div>
       </div>
       <div class="font-preview" style="background: #f5f0e8;">
         <div class="preview-label">Specimen</div>
-        <div class="preview-sample" style="font-family: var(--font-caslon); color: var(--black);">
-          The Times<br>of London
-        </div>
-        <div class="preview-sample-en" style="font-family: var(--font-caslon); font-style: italic; color: #555;">
-          "When in doubt, use Caslon." — Traditional English printer's maxim
-        </div>
-        <div class="preview-alphabet" style="font-family: var(--font-caslon);">Aa Bb Cc Dd EeFf Gg Hh IiJj Kk Ll MmNn Oo Pp QqRr Ss TtUu Vv Ww XxYy Zz</div>
+        <div class="preview-sample" style="font-family: var(--caslon); color: var(--black);">The Times<br>of London</div>
+        <div class="preview-sample-en" style="font-family: var(--caslon); color: #555;">"When in doubt, use Caslon." — Traditional English printer's maxim</div>
+        <div class="preview-alphabet" style="font-family: var(--caslon);">Aa Bb Cc Dd EeFf Gg Hh IiJj Kk Ll MmNn Oo Pp QqRr Ss TtUu Vv Ww XxYy Zz 012345</div>
       </div>
     </div>
   </section>
@@ -754,105 +515,69 @@
       </div>
     </div>
 
-    <!-- Baskerville -->
     <div class="font-block reveal">
       <div class="font-info">
-        <span class="font-family-tag">Transitional · English</span>
-        <h3 class="font-name" style="font-family: var(--font-baskerville)">Baskerville</h3>
-        <p class="font-name-en" style="font-family: var(--font-baskerville)">John Baskerville · 1757</p>
+        <span class="font-family-tag" style="background: var(--blue);">Transitional · English</span>
+        <h3 class="font-name" style="font-family: var(--caslon)">Baskerville</h3>
+        <p class="font-name-en" style="font-family: var(--caslon)">John Baskerville · 1757</p>
         <div class="font-meta">
           <div class="meta-item"><div class="meta-label">Designer</div><div class="meta-value">John Baskerville</div></div>
           <div class="meta-item"><div class="meta-label">Era</div><div class="meta-value">Age of Enlightenment · 1757</div></div>
           <div class="meta-item"><div class="meta-label">Mood</div><div class="meta-value">Refined · Precise · Authoritative</div></div>
           <div class="meta-item"><div class="meta-label">Used By</div><div class="meta-value">Apple · Moleskine · Harvard UP</div></div>
         </div>
-        <p class="font-desc">
-          John Baskerville was a Birmingham calligrapher and typefounder who created what many consider the most refined typeface ever made. Working in the Age of Enlightenment, Baskerville increased the contrast between thick and thin strokes, verticalized the axis, and created razor-sharp serifs — all of which made his type technically superior but controversially "too perfect" for some 18th-century readers. Today, Apple chose Baskerville as the default serif in iOS and macOS, cementing its status as a bridge between classical print and digital design.
-        </p>
-        <div class="font-tags">
-          <span class="font-tag">Refined</span>
-          <span class="font-tag">Screen Serif</span>
-          <span class="font-tag">Apple Default</span>
-          <span class="font-tag">Luxury</span>
-        </div>
+        <p class="font-desc">John Baskerville was a Birmingham calligrapher who created what many consider the most refined typeface ever made. Baskerville increased the contrast between thick and thin strokes, verticalized the axis, and created razor-sharp serifs. Apple chose Baskerville as the default serif in iOS and macOS, cementing its status as a bridge between classical print and digital design.</p>
+        <div class="font-tags"><span class="font-tag">Refined</span><span class="font-tag">Screen Serif</span><span class="font-tag">Apple Default</span><span class="font-tag">Luxury</span></div>
       </div>
       <div class="font-preview" style="background: #f0f4f8;">
         <div class="preview-label">Specimen</div>
-        <div class="preview-sample" style="font-family: var(--font-baskerville); color: var(--black);">
-          Enlightened<br>Thinking
-        </div>
-        <div class="preview-sample-en" style="font-family: var(--font-baskerville); font-style: italic; color: #555;">
-          "Baskerville is a transitional typeface — a bridge between the humanist and the mechanical."
-        </div>
-        <div class="preview-alphabet" style="font-family: var(--font-baskerville);">Aa Bb Cc Dd EeFf Gg Hh IiJj Kk Ll MmNn Oo Pp QqRr Ss TtUu Vv Ww XxYy Zz</div>
+        <div class="preview-sample" style="font-family: var(--caslon); color: var(--black);">Enlightened<br>Thinking</div>
+        <div class="preview-sample-en" style="font-family: var(--caslon); color: #555;">"Baskerville is a transitional typeface — a bridge between the humanist and the mechanical."</div>
+        <div class="preview-alphabet" style="font-family: var(--caslon);">Aa Bb Cc Dd EeFf Gg Hh IiJj Kk Ll MmNn Oo Pp QqRr Ss TtUu Vv Ww XxYy Zz 012345</div>
       </div>
     </div>
 
-    <!-- Bodoni -->
     <div class="font-block reveal">
       <div class="font-info">
-        <span class="font-family-tag">Modern · Didone</span>
-        <h3 class="font-name" style="font-family: var(--font-modern)">Bodoni</h3>
-        <p class="font-name-en" style="font-family: var(--font-modern)">Giambattista Bodoni · 1798</p>
+        <span class="font-family-tag" style="background: var(--red);">Modern · Didone</span>
+        <h3 class="font-name" style="font-family: var(--modern)">Bodoni</h3>
+        <p class="font-name-en" style="font-family: var(--modern)">Giambattista Bodoni · 1798</p>
         <div class="font-meta">
           <div class="meta-item"><div class="meta-label">Designer</div><div class="meta-value">Giambattista Bodoni</div></div>
           <div class="meta-item"><div class="meta-label">Era</div><div class="meta-value">Romantic · 1798</div></div>
           <div class="meta-item"><div class="meta-label">Mood</div><div class="meta-value">Dramatic · Glamorous · Bold</div></div>
-          <div class="meta-item"><div class="meta-label">Used By</div><div class="meta-value">Vogue · Armani · Museum posters</div></div>
+          <div class="meta-item"><div class="meta-label">Used By</div><div class="meta-value">Vogue · Armani · Dior</div></div>
         </div>
-        <p class="font-desc">
-          Giambattista Bodoni of Parma pushed type design to its most dramatic extreme. Where Garamond whispered, Bodoni shouted — with razor-thin hairline strokes that vanished at small sizes but blazed at display sizes. His Manuale Tipografico of 1818 remains one of the most beautiful books ever printed. Today, the Bodoni family is synonymous with fashion and luxury: Vogue, Harper's Bazaar, Armani, and Dior all rely on Bodoni's dramatic contrast to convey elegance and exclusivity.
-        </p>
-        <div class="font-tags">
-          <span class="font-tag">Fashion</span>
-          <span class="font-tag">Luxury</span>
-          <span class="font-tag">Headlines</span>
-          <span class="font-tag">Display</span>
-        </div>
+        <p class="font-desc">Bodoni pushed type design to its most dramatic extreme. Where Garamond whispered, Bodoni shouted — with razor-thin hairline strokes that vanished at small sizes but blazed at display sizes. Today the Bodoni family is synonymous with fashion and luxury: Vogue, Harper's Bazaar, Armani, and Dior all rely on its dramatic contrast to convey elegance and exclusivity.</p>
+        <div class="font-tags"><span class="font-tag">Fashion</span><span class="font-tag">Luxury</span><span class="font-tag">Headlines</span><span class="font-tag">Display</span></div>
       </div>
       <div class="font-preview" style="background: var(--black);">
-        <div class="preview-label" style="color: rgba(255,255,255,0.4);">Specimen</div>
-        <div class="preview-sample" style="font-family: var(--font-modern); color: var(--white);">
-          VOGUE<br>FASHION
-        </div>
-        <div class="preview-sample-en" style="font-family: var(--font-modern); font-style: italic; color: rgba(255,255,255,0.4);">
-          "Drama lives in the space between thick and thin."
-        </div>
-        <div class="preview-alphabet" style="font-family: var(--font-modern); color: rgba(255,255,255,0.15);">Aa Bb Cc Dd EeFf Gg Hh IiJj Kk Ll MmNn Oo Pp QqRr Ss TtUu Vv Ww XxYy Zz</div>
+        <div class="preview-label" style="color:rgba(255,255,255,0.4)">Specimen</div>
+        <div class="preview-sample" style="font-family: var(--modern); color: var(--white);">VOGUE<br>FASHION</div>
+        <div class="preview-sample-en" style="font-family: var(--modern); font-style: italic; color: rgba(255,255,255,0.4);">"Drama lives in the space between thick and thin."</div>
+        <div class="preview-alphabet" style="font-family: var(--modern); color: rgba(255,255,255,0.15);">Aa Bb Cc Dd EeFf Gg Hh IiJj Kk Ll MmNn Oo Pp QqRr Ss TtUu Vv Ww XxYy Zz 012345</div>
       </div>
     </div>
 
-    <!-- Times New Roman -->
     <div class="font-block reveal">
       <div class="font-info">
-        <span class="font-family-tag">Transitional · Functional</span>
-        <h3 class="font-name" style="font-family: var(--font-crimson)">Times New Roman</h3>
-        <p class="font-name-en" style="font-family: var(--font-crimson)">Stanley Morison · 1931</p>
+        <span class="font-family-tag" style="background: #6c757d;">Transitional · Functional</span>
+        <h3 class="font-name" style="font-family: var(--crimson)">Times New Roman</h3>
+        <p class="font-name-en" style="font-family: var(--crimson)">Stanley Morison · 1931</p>
         <div class="font-meta">
           <div class="meta-item"><div class="meta-label">Designer</div><div class="meta-value">Stanley Morison for The Times</div></div>
           <div class="meta-item"><div class="meta-label">Era</div><div class="meta-value">Modern · 1931</div></div>
           <div class="meta-item"><div class="meta-label">Mood</div><div class="meta-value">Functional · Neutral · Ubiquitous</div></div>
-          <div class="meta-item"><div class="meta-label">Used By</div><div class="meta-value">Microsoft Word · UK Government · Schools</div></div>
+          <div class="meta-item"><div class="meta-label">Used By</div><div class="meta-value">Microsoft Word · UK Government</div></div>
         </div>
-        <p class="font-desc">
-          Times New Roman was designed in 1931 specifically for the newspaper The Times of London — not to be beautiful, but to fit as many words as possible in a narrow column while remaining legible at small sizes. Stanley Morison studied the newspaper's existing type and optimized everything for density and efficiency. The result became the default typeface of Microsoft Word in 1992, and for billions of students and office workers, Times New Roman IS what a "normal font" looks like.
-        </p>
-        <div class="font-tags">
-          <span class="font-tag">Microsoft Default</span>
-          <span class="font-tag">Office</span>
-          <span class="font-tag">Dense Text</span>
-          <span class="font-tag">Newspaper</span>
-        </div>
+        <p class="font-desc">Times New Roman was designed specifically for the newspaper The Times of London — not to be beautiful, but to fit as many words as possible in a narrow column while remaining legible at small sizes. It became the default typeface of Microsoft Word in 1992, and for billions of people, Times New Roman IS what a "normal font" looks like.</p>
+        <div class="font-tags"><span class="font-tag">Microsoft Default</span><span class="font-tag">Office</span><span class="font-tag">Dense Text</span><span class="font-tag">Newspaper</span></div>
       </div>
       <div class="font-preview" style="background: #faf8f5;">
         <div class="preview-label">Specimen</div>
-        <div class="preview-sample" style="font-family: var(--font-crimson); color: var(--black);">
-          The Times<br>of London
-        </div>
-        <div class="preview-sample-en" style="font-family: var(--font-crimson); font-style: italic; color: #555;">
-          "Not the most beautiful, but the most useful typeface of the 20th century."
-        </div>
-        <div class="preview-alphabet" style="font-family: var(--font-crimson);">Aa Bb Cc Dd EeFf Gg Hh IiJj Kk Ll MmNn Oo Pp QqRr Ss TtUu Vv Ww XxYy Zz</div>
+        <div class="preview-sample" style="font-family: var(--crimson); color: var(--black);">The Times<br>of London</div>
+        <div class="preview-sample-en" style="font-family: var(--crimson); color: #555;">"Not the most beautiful, but the most useful typeface of the 20th century."</div>
+        <div class="preview-alphabet" style="font-family: var(--crimson);">Aa Bb Cc Dd EeFf Gg Hh IiJj Kk Ll MmNn Oo Pp QqRr Ss TtUu Vv Ww XxYy Zz 012345</div>
       </div>
     </div>
   </section>
@@ -867,105 +592,69 @@
       </div>
     </div>
 
-    <!-- Helvetica -->
     <div class="font-block reveal">
       <div class="font-info">
         <span class="font-family-tag" style="background: var(--red);">Grotesque · Swiss</span>
-        <h3 class="font-name" style="font-family: var(--font-geo)">Helvetica</h3>
-        <p class="font-name-en" style="font-family: var(--font-geo)">Max Miedinger & Eduard Hoffmann · 1957</p>
+        <h3 class="font-name" style="font-family: var(--geo); font-weight: 700;">Helvetica</h3>
+        <p class="font-name-en" style="font-family: var(--geo)">Max Miedinger & Eduard Hoffmann · 1957</p>
         <div class="font-meta">
           <div class="meta-item"><div class="meta-label">Designer</div><div class="meta-value">Miedinger & Hoffmann</div></div>
           <div class="meta-item"><div class="meta-label">Origin</div><div class="meta-value">Haas Type Foundry, Switzerland</div></div>
-          <div class="meta-item"><div class="meta-label">Mood</div><div class="meta-value">Neutral · Corporate · Swiss Precision</div></div>
+          <div class="meta-item"><div class="meta-label">Mood</div><div class="meta-value">Neutral · Corporate · Swiss</div></div>
           <div class="meta-item"><div class="meta-label">Used By</div><div class="meta-value">NYC Subway · American Airlines · BMW</div></div>
         </div>
-        <p class="font-desc">
-          Helvetica is arguably the most famous typeface in the world. Designed in 1957 in Switzerland, it became the visual language of Swiss International Style — clean, rational, and objective. Its near-perfect neutrality made it the go-to choice for corporations wanting to communicate reliability without personality: American Airlines, NASA, Lufthansa, the NYC subway system, and thousands of government agencies. Whether you love it or find it "the visual equivalent of elevator music," you cannot escape it.
-        </p>
-        <div class="font-tags">
-          <span class="font-tag">Swiss Design</span>
-          <span class="font-tag">Corporate Identity</span>
-          <span class="font-tag">Environmental</span>
-          <span class="font-tag">Neutral</span>
-        </div>
+        <p class="font-desc">Helvetica is arguably the most famous typeface in the world. Designed in 1957 in Switzerland, it became the visual language of Swiss International Style. Its near-perfect neutrality made it the go-to choice for corporations wanting to communicate reliability without personality. Whether you love it or find it "elevator music," you cannot escape it.</p>
+        <div class="font-tags"><span class="font-tag">Swiss Design</span><span class="font-tag">Corporate</span><span class="font-tag">Environmental</span><span class="font-tag">Neutral</span></div>
       </div>
       <div class="font-preview" style="background: var(--black);">
-        <div class="preview-label" style="color: rgba(255,255,255,0.4);">Specimen</div>
-        <div class="preview-sample" style="font-family: var(--font-geo); font-weight: 700; color: var(--white);">
-          HELVETICA<br>NEUTRAL
-        </div>
-        <div class="preview-sample-en" style="font-family: var(--font-geo); font-style: italic; color: rgba(255,255,255,0.35);">
-          "When you think about Helvetica, you think about the world it built."
-        </div>
-        <div class="preview-alphabet" style="font-family: var(--font-geo); color: rgba(255,255,255,0.15);">Aa Bb Cc Dd EeFf Gg Hh IiJj Kk Ll MmNn Oo Pp QqRr Ss TtUu Vv Ww XxYy Zz</div>
+        <div class="preview-label" style="color:rgba(255,255,255,0.4)">Specimen</div>
+        <div class="preview-sample" style="font-family: var(--geo); font-weight: 700; color: var(--white);">HELVETICA<br>NEUTRAL</div>
+        <div class="preview-sample-en" style="font-family: var(--geo); font-style: italic; color: rgba(255,255,255,0.35);">"When you think about Helvetica, you think about the world it built."</div>
+        <div class="preview-alphabet" style="font-family: var(--geo); color: rgba(255,255,255,0.15);">Aa Bb Cc Dd EeFf Gg Hh IiJj Kk Ll MmNn Oo Pp QqRr Ss TtUu Vv Ww XxYy Zz 012345</div>
       </div>
     </div>
 
-    <!-- Futura -->
     <div class="font-block reveal">
       <div class="font-info">
         <span class="font-family-tag" style="background: var(--blue);">Geometric · Bauhaus</span>
-        <h3 class="font-name" style="font-family: var(--font-geo); font-weight: 300;">Futura</h3>
-        <p class="font-name-en" style="font-family: var(--font-geo); font-weight: 300;">Paul Renner · 1927</p>
+        <h3 class="font-name" style="font-family: var(--geo); font-weight: 300;">Futura</h3>
+        <p class="font-name-en" style="font-family: var(--geo); font-weight: 300;">Paul Renner · 1927</p>
         <div class="font-meta">
           <div class="meta-item"><div class="meta-label">Designer</div><div class="meta-value">Paul Renner</div></div>
           <div class="meta-item"><div class="meta-label">Origin</div><div class="meta-value">Germany · Bauhaus Era · 1927</div></div>
           <div class="meta-item"><div class="meta-label">Mood</div><div class="meta-value">Geometric · Avant-garde · Progressive</div></div>
-          <div class="meta-item"><div class="meta-label">Used By</div><div class="meta-value">Volkswagen · Absolut Vodka · Louis Vuitton</div></div>
+          <div class="meta-item"><div class="meta-label">Used By</div><div class="meta-value">Volkswagen · Louis Vuitton · Absolut</div></div>
         </div>
-        <p class="font-desc">
-          Futura was designed by Paul Renner in 1927, at the height of the Bauhaus movement in Germany. Built entirely from geometric forms — the circle, triangle, and square — it was revolutionary: no curves, no irregularities, pure construction. Unlike Helvetica's neutrality, Futura feels distinctly of the future — progressive, rational, and optimistic. Volkswagen uses it on every car badge; Louis Vuitton uses it in its modern campaigns; Absolut Vodka made it iconic in advertising.
-        </p>
-        <div class="font-tags">
-          <span class="font-tag">Bauhaus</span>
-          <span class="font-tag">Geometric</span>
-          <span class="font-tag">Automotive</span>
-          <span class="font-tag">Avant-garde</span>
-        </div>
+        <p class="font-desc">Futura was designed at the height of the Bauhaus movement in Germany. Built entirely from geometric forms — the circle, triangle, and square — it was revolutionary: no curves, no irregularities, pure construction. Unlike Helvetica's neutrality, Futura feels distinctly of the future. Volkswagen uses it on every car badge; Louis Vuitton uses it in modern campaigns.</p>
+        <div class="font-tags"><span class="font-tag">Bauhaus</span><span class="font-tag">Geometric</span><span class="font-tag">Automotive</span><span class="font-tag">Avant-garde</span></div>
       </div>
       <div class="font-preview" style="background: var(--white); border: 2px solid var(--black);">
         <div class="preview-label">Specimen</div>
-        <div class="preview-sample" style="font-family: var(--font-geo); font-weight: 300; color: var(--black);">
-          FUTURA<br>GEOMETRIC
-        </div>
-        <div class="preview-sample-en" style="font-family: var(--font-geo); font-weight: 300; font-style: italic; color: #555;">
-          "Built from the pure geometry of circle, triangle, and square."
-        </div>
-        <div class="preview-alphabet" style="font-family: var(--font-geo); font-weight: 300;">Aa Bb Cc Dd EeFf Gg Hh IiJj Kk Ll MmNn Oo Pp QqRr Ss TtUu Vv Ww XxYy Zz</div>
+        <div class="preview-sample" style="font-family: var(--geo); font-weight: 300; color: var(--black);">FUTURA<br>GEOMETRIC</div>
+        <div class="preview-sample-en" style="font-family: var(--geo); font-weight: 300; font-style: italic; color: #555;">"Built from the pure geometry of circle, triangle, and square."</div>
+        <div class="preview-alphabet" style="font-family: var(--geo); font-weight: 300;">Aa Bb Cc Dd EeFf Gg Hh IiJj Kk Ll MmNn Oo Pp QqRr Ss TtUu Vv Ww XxYy Zz 012345</div>
       </div>
     </div>
 
-    <!-- Gill Sans -->
     <div class="font-block reveal">
       <div class="font-info">
         <span class="font-family-tag" style="background: var(--blue);">Humanist · British</span>
-        <h3 class="font-name" style="font-family: var(--font-human)">Gill Sans</h3>
-        <p class="font-name-en" style="font-family: var(--font-human)">Eric Gill · 1928</p>
+        <h3 class="font-name" style="font-family: var(--human)">Gill Sans</h3>
+        <p class="font-name-en" style="font-family: var(--human)">Eric Gill · 1928</p>
         <div class="font-meta">
           <div class="meta-item"><div class="meta-label">Designer</div><div class="meta-value">Eric Gill</div></div>
           <div class="meta-item"><div class="meta-label">Origin</div><div class="meta-value">England · 1928</div></div>
           <div class="meta-item"><div class="meta-label">Mood</div><div class="meta-value">Humanist · British · Scholarly</div></div>
-          <div class="meta-item"><div class="meta-label">Used By</div><div class="meta-value">London Underground · BBC · Penguin Books</div></div>
+          <div class="meta-item"><div class="meta-label">Used By</div><div class="meta-value">London Underground · BBC · Penguin</div></div>
         </div>
-        <p class="font-desc">
-          Eric Gill designed Gill Sans in 1928, inspired by the humanist letterforms of the Renaissance rather than geometric abstraction. The result is the warmest of the major sans-serifs — it has the rationality of Futura but with the organic soul of a hand-drawn letter. The London Underground adopted it as its house typeface in 1933, and today it is arguably more recognizable on the streets of London than Helvetica is in New York.
-        </p>
-        <div class="font-tags">
-          <span class="font-tag">Humanist</span>
-          <span class="font-tag">British Rail</span>
-          <span class="font-tag">Scholarly</span>
-          <span class="font-tag">Environmental</span>
-        </div>
+        <p class="font-desc">Eric Gill designed Gill Sans in 1928, inspired by the humanist letterforms of the Renaissance rather than geometric abstraction. The result is the warmest of the major sans-serifs — it has the rationality of Futura but with the organic soul of a hand-drawn letter. The London Underground adopted it as its house typeface in 1933.</p>
+        <div class="font-tags"><span class="font-tag">Humanist</span><span class="font-tag">British Rail</span><span class="font-tag">Scholarly</span><span class="font-tag">Environmental</span></div>
       </div>
       <div class="font-preview" style="background: var(--red);">
-        <div class="preview-label" style="color: rgba(255,255,255,0.4);">Specimen</div>
-        <div class="preview-sample" style="font-family: var(--font-human); font-weight: 600; color: var(--white);">
-          London<br>Underground
-        </div>
-        <div class="preview-sample-en" style="font-family: var(--font-human); font-style: italic; color: rgba(255,255,255,0.4);">
-          "Gill Sans is the most English of all the major sans-serifs."
-        </div>
-        <div class="preview-alphabet" style="font-family: var(--font-human); color: rgba(255,255,255,0.15);">Aa Bb Cc Dd EeFf Gg Hh IiJj Kk Ll MmNn Oo Pp QqRr Ss TtUu Vv Ww XxYy Zz</div>
+        <div class="preview-label" style="color:rgba(255,255,255,0.4)">Specimen</div>
+        <div class="preview-sample" style="font-family: var(--human); font-weight: 600; color: var(--white);">London<br>Underground</div>
+        <div class="preview-sample-en" style="font-family: var(--human); font-style: italic; color: rgba(255,255,255,0.4);">"The most English of all the major sans-serifs."</div>
+        <div class="preview-alphabet" style="font-family: var(--human); color: rgba(255,255,255,0.15);">Aa Bb Cc Dd EeFf Gg Hh IiJj Kk Ll MmNn Oo Pp QqRr Ss TtUu Vv Ww XxYy Zz 012345</div>
       </div>
     </div>
   </section>
@@ -980,76 +669,52 @@
       </div>
     </div>
 
-    <!-- Courier -->
     <div class="font-block reveal">
       <div class="font-info">
         <span class="font-family-tag" style="background: #7B2D8B;">Slab Serif · Typewriter</span>
-        <h3 class="font-name" style="font-family: var(--font-slab)">Courier Prime</h3>
-        <p class="font-name-en" style="font-family: var(--font-slab)">Adrian Frutiger · IBM Selectric · 1955</p>
+        <h3 class="font-name" style="font-family: var(--courier)">Courier Prime</h3>
+        <p class="font-name-en" style="font-family: var(--courier)">Adrian Frutiger · IBM Selectric · 1955</p>
         <div class="font-meta">
           <div class="meta-item"><div class="meta-label">Designer</div><div class="meta-value">Adrian Frutiger</div></div>
           <div class="meta-item"><div class="meta-label">Origin</div><div class="meta-value">IBM Selectric · 1955</div></div>
           <div class="meta-item"><div class="meta-label">Mood</div><div class="meta-value">Typewriter · Authentic · Script Feel</div></div>
-          <div class="meta-item"><div class="meta-label">Used By</div><div class="meta-value">Screenplays · Government forms · Hacker aesthetic</div></div>
+          <div class="meta-item"><div class="meta-label">Used By</div><div class="meta-value">Screenplays · Government · Hacker aesthetic</div></div>
         </div>
-        <p class="font-desc">
-          Courier began as the typeface of the IBM Selectric typewriter — the machine that dominated offices from the 1960s to the 1980s. Its monospaced letterforms (each letter occupies equal horizontal space) were a physical necessity of typewriter mechanics, not an aesthetic choice. Today it is the standard format for screenplays (every page equals one minute of screen time by Hollywood convention) and government documents. It whispers of typewriters, late-night screenwriting sessions, and the romance of the written word.
-        </p>
-        <div class="font-tags">
-          <span class="font-tag">Monospace</span>
-          <span class="font-tag">Screenplay</span>
-          <span class="font-tag">Typewriter</span>
-          <span class="font-tag">Government</span>
-        </div>
+        <p class="font-desc">Courier began as the typeface of the IBM Selectric typewriter — the machine that dominated offices from the 1960s to the 1980s. Its monospaced letterforms were a physical necessity of typewriter mechanics. Today it is the standard format for screenplays — every page equals one minute of screen time by Hollywood convention.</p>
+        <div class="font-tags"><span class="font-tag">Monospace</span><span class="font-tag">Screenplay</span><span class="font-tag">Typewriter</span><span class="font-tag">Government</span></div>
       </div>
       <div class="font-preview" style="background: #f5f3ee; border: 2px solid var(--black);">
         <div class="preview-label">Specimen</div>
-        <div class="preview-sample" style="font-family: var(--font-slab); color: var(--black);">
-          THE END<br>FADE OUT
-        </div>
-        <div class="preview-sample-en" style="font-family: var(--font-slab); font-style: italic; color: #555;">
-          "INT. HOME OFFICE — NIGHT" A screenwriter types alone.
-        </div>
-        <div class="preview-alphabet" style="font-family: var(--font-slab);">Aa Bb Cc Dd EeFf Gg Hh IiJj Kk Ll MmNn Oo Pp QqRr Ss TtUu Vv Ww XxYy Zz</div>
+        <div class="preview-sample" style="font-family: var(--courier); color: var(--black);">THE END<br>FADE OUT</div>
+        <div class="preview-sample-en" style="font-family: var(--courier); color: #555;">"INT. HOME OFFICE — NIGHT" A screenwriter types alone.</div>
+        <div class="preview-alphabet" style="font-family: var(--courier);">Aa Bb Cc Dd EeFf Gg Hh IiJj Kk Ll MmNn Oo Pp QqRr Ss TtUu Vv Ww XxYy Zz 012345</div>
       </div>
     </div>
 
-    <!-- Script -->
     <div class="font-block reveal">
       <div class="font-info">
         <span class="font-family-tag" style="background: var(--yellow); color: var(--black);">Script · Casual</span>
-        <h3 class="font-name" style="font-family: var(--font-script); font-size: 2.5rem;">Lobster</h3>
-        <p class="font-name-en" style="font-family: var(--font-script)">Pablo Impallari · 2011 · Google Fonts</p>
+        <h3 class="font-name" style="font-family: var(--script); font-size: 2.5rem;">Lobster</h3>
+        <p class="font-name-en" style="font-family: var(--script)">Pablo Impallari · 2011 · Google Fonts</p>
         <div class="font-meta">
           <div class="meta-item"><div class="meta-label">Designer</div><div class="meta-value">Pablo Impallari</div></div>
           <div class="meta-item"><div class="meta-label">Origin</div><div class="meta-value">Argentina · 2011 · Open Source</div></div>
           <div class="meta-item"><div class="meta-label">Mood</div><div class="meta-value">Casual · Friendly · Conversational</div></div>
           <div class="meta-item"><div class="meta-label">Used By</div><div class="meta-value">Startups · Food brands · Instagram</div></div>
         </div>
-        <p class="font-desc">
-          Lobster became one of the most viral typefaces of the 2010s when it was released as a free Google Font in 2011. Its connected, brush-like letterforms evoke the casual warmth of a handwritten note — which is exactly why startups, food brands, and social media designers adopted it so enthusiastically. Within months of release, Lobster was appearing on restaurant menus, indie packaging, and thousands of websites worldwide.
-        </p>
-        <div class="font-tags">
-          <span class="font-tag">Google Fonts</span>
-          <span class="font-tag">Handwritten Feel</span>
-          <span class="font-tag">Startup</span>
-          <span class="font-tag">Casual</span>
-        </div>
+        <p class="font-desc">Lobster became one of the most viral typefaces of the 2010s when it was released as a free Google Font in 2011. Its connected, brush-like letterforms evoke the casual warmth of a handwritten note. Within months of release, Lobster was appearing on restaurant menus, indie packaging, and thousands of websites worldwide.</p>
+        <div class="font-tags"><span class="font-tag">Google Fonts</span><span class="font-tag">Handwritten Feel</span><span class="font-tag">Startup</span><span class="font-tag">Casual</span></div>
       </div>
       <div class="font-preview" style="background: var(--yellow);">
-        <div class="preview-label" style="color: rgba(0,0,0,0.4);">Specimen</div>
-        <div class="preview-sample" style="font-family: var(--font-script); color: var(--black);">
-          Fresh &<br>Delicious
-        </div>
-        <div class="preview-sample-en" style="font-family: var(--font-script); font-style: italic; color: rgba(0,0,0,0.4);">
-          "Handwritten warmth, digital convenience."
-        </div>
-        <div class="preview-alphabet" style="font-family: var(--font-script); color: rgba(0,0,0,0.15);">Aa Bb Cc Dd EeFf Gg Hh IiJj Kk Ll MmNn Oo Pp QqRr Ss TtUu Vv Ww XxYy Zz</div>
+        <div class="preview-label" style="color:rgba(0,0,0,0.4)">Specimen</div>
+        <div class="preview-sample" style="font-family: var(--script); color: var(--black);">Fresh &<br>Delicious</div>
+        <div class="preview-sample-en" style="font-family: var(--script); color: rgba(0,0,0,0.4);">"Handwritten warmth, digital convenience."</div>
+        <div class="preview-alphabet" style="font-family: var(--script); color: rgba(0,0,0,0.15);">Aa Bb Cc Dd EeFf Gg Hh IiJj Kk Ll MmNn Oo Pp QqRr Ss TtUu Vv Ww XxYy Zz 012345</div>
       </div>
     </div>
   </section>
 
-  <!-- FONT COMPARISON TOOL -->
+  <!-- COMPARISON -->
   <section class="comparison-section" id="compare">
     <div class="compare-header">
       <div class="section-header" style="padding: 0; border-bottom: none;">
@@ -1059,95 +724,55 @@
           <p class="section-subtitle">See the Personality — Side by Side</p>
         </div>
       </div>
-      <p class="compare-instructions">
-        Select two typefaces, type any text, and feel the difference. Try a brand name, a headline, or a paragraph — you will discover how dramatically the same words change character with a different typeface.
-      </p>
+      <p class="compare-instructions">Select two typefaces, type any text, and feel the difference. Try a brand name, a headline, or a paragraph — you will discover how dramatically the same words change character with a different typeface.</p>
     </div>
-
     <div class="compare-controls">
       <div class="font-selector">
         <label class="selector-label">Font A</label>
         <select class="font-select" id="fontA">
-          <optgroup label="— Old Style —">
-            <option value="garamond" selected>Garamond</option>
-            <option value="caslon">Caslon</option>
-          </optgroup>
-          <optgroup label="— Transitional —">
-            <option value="baskerville">Baskerville</option>
-            <option value="times">Times New Roman</option>
-          </optgroup>
-          <optgroup label="— Modern —">
-            <option value="bodoni">Bodoni</option>
-          </optgroup>
-          <optgroup label="— Sans-Serif —">
-            <option value="helvetica">Helvetica</option>
-            <option value="futura">Futura</option>
-            <option value="gillsans">Gill Sans</option>
-          </optgroup>
-          <optgroup label="— Slab —">
-            <option value="courier">Courier Prime</option>
-          </optgroup>
-          <optgroup label="— Script —">
-            <option value="lobster">Lobster</option>
-          </optgroup>
+          <option value="garamond" selected>Garamond</option>
+          <option value="caslon">Caslon</option>
+          <option value="baskerville">Baskerville</option>
+          <option value="bodoni">Bodoni</option>
+          <option value="helvetica">Helvetica</option>
+          <option value="futura">Futura</option>
+          <option value="courier">Courier Prime</option>
+          <option value="lobster">Lobster</option>
         </select>
       </div>
       <div class="compare-vs">VS</div>
       <div class="font-selector">
         <label class="selector-label">Font B</label>
         <select class="font-select" id="fontB">
-          <optgroup label="— Old Style —">
-            <option value="garamond">Garamond</option>
-            <option value="caslon">Caslon</option>
-          </optgroup>
-          <optgroup label="— Transitional —">
-            <option value="baskerville" selected>Baskerville</option>
-            <option value="times">Times New Roman</option>
-          </optgroup>
-          <optgroup label="— Modern —">
-            <option value="bodoni">Bodoni</option>
-          </optgroup>
-          <optgroup label="— Sans-Serif —">
-            <option value="helvetica">Helvetica</option>
-            <option value="futura">Futura</option>
-            <option value="gillsans">Gill Sans</option>
-          </optgroup>
-          <optgroup label="— Slab —">
-            <option value="courier">Courier Prime</option>
-          </optgroup>
-          <optgroup label="— Script —">
-            <option value="lobster">Lobster</option>
-          </optgroup>
+          <option value="garamond">Garamond</option>
+          <option value="caslon">Caslon</option>
+          <option value="baskerville" selected>Baskerville</option>
+          <option value="bodoni">Bodoni</option>
+          <option value="helvetica">Helvetica</option>
+          <option value="futura">Futura</option>
+          <option value="courier">Courier Prime</option>
+          <option value="lobster">Lobster</option>
         </select>
       </div>
     </div>
-
     <div class="compare-preview-area">
       <input type="text" class="compare-text-input" id="compareInput" placeholder="Type anything to compare..." value="Typography is the craft of endowing human language with a durable visual form.">
       <div class="compare-panels">
         <div class="compare-panel">
           <div class="panel-font-label" id="panelALabel">Garamond</div>
-          <div class="panel-sample" id="panelA" style="font-family: var(--font-garamond)">
-            Typography is the craft of endowing human language with a durable visual form.
-          </div>
-          <div class="panel-en-sample" id="panelAEn">
-            "Type is a beautiful group of letters, not a group of beautiful letters."
-          </div>
+          <div class="panel-sample" id="panelA" style="font-family: var(--garamond)">Typography is the craft of endowing human language with a durable visual form.</div>
+          <div class="panel-en-sample" id="panelAEn">"Type is a beautiful group of letters, not a group of beautiful letters."</div>
         </div>
         <div class="compare-panel">
           <div class="panel-font-label" id="panelBLabel">Baskerville</div>
-          <div class="panel-sample" id="panelB" style="font-family: var(--font-baskerville)">
-            Typography is the craft of endowing human language with a durable visual form.
-          </div>
-          <div class="panel-en-sample" id="panelBEn">
-            "Baskerville is a bridge between the humanist and the mechanical."
-          </div>
+          <div class="panel-sample" id="panelB" style="font-family: var(--caslon)">Typography is the craft of endowing human language with a durable visual form.</div>
+          <div class="panel-en-sample" id="panelBEn">"Baskerville is a bridge between the humanist and the mechanical."</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FONT FAMILY TREE -->
+  <!-- FAMILY TREE -->
   <section class="tree-section" id="tree">
     <div class="section-header" style="padding: 0 0 3rem; border-bottom: 3px solid var(--black); margin-bottom: 3rem;">
       <div class="section-number">07</div>
@@ -1156,58 +781,51 @@
         <p class="section-subtitle">From Renaissance Calligraphy to Digital Screens — 500 Years of Evolution</p>
       </div>
     </div>
-
     <div class="tree-container">
-      <div class="tree-row" style="justify-content: space-around; flex-wrap: wrap; gap: 2rem;">
-        <div style="text-align: center;">
-          <div class="tree-node serif" style="min-width:160px;">OLD STYLE<br><span style="font-size:0.65rem;font-weight:400">Humanist Serif</span></div>
-          <div style="display:flex;gap:0.5rem;justify-content:center;margin-top:0.5rem;flex-wrap:wrap;">
+      <p class="tree-label">Serif Typefaces · 衬线字体</p>
+      <div style="display:flex;justify-content:space-around;flex-wrap:wrap;gap:2rem;margin-bottom:1rem;">
+        <div style="text-align:center;">
+          <div class="tree-node serif" style="min-width:150px;">OLD STYLE<br><span style="font-size:0.6rem;font-weight:400">Humanist Serif</span></div>
+          <div class="tree-branch">
             <div class="tree-node serif" style="font-size:0.7rem;min-width:90px;">Garamond</div>
             <div class="tree-node serif" style="font-size:0.7rem;min-width:90px;">Caslon</div>
             <div class="tree-node serif" style="font-size:0.7rem;min-width:90px;">Jenson</div>
           </div>
-          <div style="display:flex;gap:0.5rem;justify-content:center;margin-top:0.5rem;">
-            <div class="tree-node serif" style="font-size:0.65rem;min-width:80px;font-weight:400;border-style:dashed;">Palatino</div>
-          </div>
         </div>
-
-        <div style="text-align: center;">
-          <div class="tree-node serif" style="min-width:160px;border-color:var(--blue);color:var(--blue);">TRANSITIONAL<br><span style="font-size:0.65rem;font-weight:400">Enlightenment</span></div>
-          <div style="display:flex;gap:0.5rem;justify-content:center;margin-top:0.5rem;flex-wrap:wrap;">
+        <div style="text-align:center;">
+          <div class="tree-node serif" style="min-width:150px;border-color:var(--blue);color:var(--blue);">TRANSITIONAL<br><span style="font-size:0.6rem;font-weight:400">Enlightenment</span></div>
+          <div class="tree-branch">
             <div class="tree-node serif" style="font-size:0.7rem;min-width:90px;border-color:var(--blue);color:var(--blue);">Baskerville</div>
             <div class="tree-node serif" style="font-size:0.7rem;min-width:90px;border-color:var(--blue);color:var(--blue);">Times New Roman</div>
           </div>
         </div>
-
-        <div style="text-align: center;">
-          <div class="tree-node serif" style="min-width:160px;border-color:var(--red);color:var(--red);">MODERN / DIDONE<br><span style="font-size:0.65rem;font-weight:400">Romantic</span></div>
-          <div style="display:flex;gap:0.5rem;justify-content:center;margin-top:0.5rem;flex-wrap:wrap;">
+        <div style="text-align:center;">
+          <div class="tree-node serif" style="min-width:150px;border-color:var(--red);color:var(--red);">MODERN / DIDONE<br><span style="font-size:0.6rem;font-weight:400">Romantic</span></div>
+          <div class="tree-branch">
             <div class="tree-node serif" style="font-size:0.7rem;min-width:90px;border-color:var(--red);color:var(--red);">Bodoni</div>
             <div class="tree-node serif" style="font-size:0.7rem;min-width:90px;border-color:var(--red);color:var(--red);">Didot</div>
           </div>
         </div>
       </div>
-
-      <p class="tree-label" style="margin-top:3rem;">The Sans-Serif Revolution · 无衬线革命</p>
-
-      <div class="tree-row" style="justify-content: space-around; flex-wrap: wrap; gap: 2rem;">
-        <div style="text-align: center;">
-          <div class="tree-node sans" style="min-width:150px;">GROTESQUE<br><span style="font-size:0.65rem;font-weight:400">Swiss · Industrial</span></div>
-          <div style="display:flex;gap:0.5rem;justify-content:center;margin-top:0.5rem;">
+      <p class="tree-label" style="margin-top:3rem;">Sans-Serif Typefaces · 无衬线字体</p>
+      <div style="display:flex;justify-content:space-around;flex-wrap:wrap;gap:2rem;">
+        <div style="text-align:center;">
+          <div class="tree-node sans" style="min-width:140px;">GROTESQUE<br><span style="font-size:0.6rem;font-weight:400">Swiss · Industrial</span></div>
+          <div class="tree-branch">
             <div class="tree-node sans" style="font-size:0.7rem;min-width:90px;">Helvetica</div>
             <div class="tree-node sans" style="font-size:0.7rem;min-width:90px;">Univers</div>
           </div>
         </div>
-        <div style="text-align: center;">
-          <div class="tree-node sans" style="min-width:150px;border-color:#9B59B6;color:#9B59B6;">GEOMETRIC<br><span style="font-size:0.65rem;font-weight:400">Bauhaus</span></div>
-          <div style="display:flex;gap:0.5rem;justify-content:center;margin-top:0.5rem;">
-            <div class="tree-node sans" style="font-size:0.7rem;min-width:90px;border-color:#9B59B6;color:#9B59B6;">Futura</div>
-            <div class="tree-node sans" style="font-size:0.7rem;min-width:90px;border-color:#9B59B6;color:#9B59B6;">Circular</div>
+        <div style="text-align:center;">
+          <div class="tree-node sans" style="min-width:140px;border-color:var(--blue);color:var(--blue);">GEOMETRIC<br><span style="font-size:0.6rem;font-weight:400">Bauhaus</span></div>
+          <div class="tree-branch">
+            <div class="tree-node sans" style="font-size:0.7rem;min-width:90px;border-color:var(--blue);color:var(--blue);">Futura</div>
+            <div class="tree-node sans" style="font-size:0.7rem;min-width:90px;border-color:var(--blue);color:var(--blue);">Circular</div>
           </div>
         </div>
-        <div style="text-align: center;">
-          <div class="tree-node sans" style="min-width:150px;border-color:#27AE60;color:#27AE60;">HUMANIST<br><span style="font-size:0.65rem;font-weight:400">British</span></div>
-          <div style="display:flex;gap:0.5rem;justify-content:center;margin-top:0.5rem;">
+        <div style="text-align:center;">
+          <div class="tree-node sans" style="min-width:140px;border-color:#27AE60;color:#27AE60;">HUMANIST<br><span style="font-size:0.6rem;font-weight:400">British</span></div>
+          <div class="tree-branch">
             <div class="tree-node sans" style="font-size:0.7rem;min-width:90px;border-color:#27AE60;color:#27AE60;">Gill Sans</div>
             <div class="tree-node sans" style="font-size:0.7rem;min-width:90px;border-color:#27AE60;color:#27AE60;">Optima</div>
           </div>
@@ -1221,7 +839,7 @@
     <div class="footer-grid">
       <div>
         <div class="footer-brand">The Typography Museum</div>
-        <div class="footer-tagline">A visual journey through the world's most iconic typefaces · 英文字体博物馆</div>
+        <div class="footer-tagline">A visual journey through the world's most iconic typefaces</div>
       </div>
       <div>
         <div class="footer-col-title">Explore</div>
@@ -1249,37 +867,31 @@
   </footer>
 
   <script>
-    /* ========================================
-       FONT COMPARISON ENGINE
-    ======================================== */
+    /* FONT COMPARISON */
     const fontMap = {
-      garamond:   { css: 'var(--font-garamond)',   label: 'Garamond',        quote: '"Type is a beautiful group of letters, not a group of beautiful letters."' },
-      caslon:     { css: 'var(--font-caslon)',     label: 'Caslon',          quote: '"When in doubt, use Caslon." — Traditional English printer' },
-      baskerville:{ css: 'var(--font-baskerville)',label: 'Baskerville',    quote: '"Baskerville is a bridge between the humanist and the mechanical."' },
-      times:      { css: 'var(--font-crimson)',    label: 'Times New Roman', quote: '"Not the most beautiful, but the most useful typeface of the 20th century."' },
-      bodoni:     { css: 'var(--font-modern)',      label: 'Bodoni',          quote: '"Drama lives in the space between thick and thin."' },
-      helvetica:  { css: 'var(--font-geo)',         label: 'Helvetica',       quote: '"When you think about Helvetica, you think about the world it built."' },
-      futura:     { css: 'var(--font-geo)',          label: 'Futura',          quote: '"Built from the pure geometry of circle, triangle, and square."' },
-      gillsans:  { css: 'var(--font-human)',         label: 'Gill Sans',       quote: '"The most English of all major sans-serifs."' },
-      courier:   { css: 'var(--font-slab)',         label: 'Courier Prime',   quote: '"Every page equals one minute of screen time."' },
-      lobster:   { css: 'var(--font-script)',        label: 'Lobster',         quote: '"Handwritten warmth, digital convenience."' }
+      garamond:    { css: 'var(--garamond)',    label: 'Garamond',       quote: '"Type is a beautiful group of letters, not a group of beautiful letters."' },
+      caslon:      { css: 'var(--caslon)',      label: 'Caslon',         quote: '"When in doubt, use Caslon." — Traditional English printer' },
+      baskerville: { css: 'var(--caslon)',      label: 'Baskerville',    quote: '"Baskerville is a bridge between the humanist and the mechanical."' },
+      bodoni:      { css: 'var(--modern)',      label: 'Bodoni',         quote: '"Drama lives in the space between thick and thin."' },
+      helvetica:   { css: 'var(--geo)',         label: 'Helvetica',      quote: '"When you think about Helvetica, you think about the world it built."' },
+      futura:      { css: 'var(--geo)',         label: 'Futura',         quote: '"Built from the pure geometry of circle, triangle, and square."' },
+      courier:     { css: 'var(--courier)',     label: 'Courier Prime',  quote: '"Every page equals one minute of screen time."' },
+      lobster:     { css: 'var(--script)',      label: 'Lobster',        quote: '"Handwritten warmth, digital convenience."' }
     };
 
     const fontAEl = document.getElementById('fontA');
     const fontBEl = document.getElementById('fontB');
     const inputEl = document.getElementById('compareInput');
-    const panelA  = document.getElementById('panelA');
-    const panelB  = document.getElementById('panelB');
+    const panelA = document.getElementById('panelA');
+    const panelB = document.getElementById('panelB');
     const panelAEn = document.getElementById('panelAEn');
     const panelBEn = document.getElementById('panelBEn');
     const panelALabel = document.getElementById('panelALabel');
     const panelBLabel = document.getElementById('panelBLabel');
 
     function updateComparison() {
-      const a = fontAEl.value;
-      const b = fontBEl.value;
+      const a = fontAEl.value, b = fontBEl.value;
       const text = inputEl.value || 'Typography';
-
       panelA.style.fontFamily = fontMap[a].css;
       panelB.style.fontFamily = fontMap[b].css;
       panelA.textContent = text;
@@ -1289,40 +901,29 @@
       panelALabel.textContent = fontMap[a].label;
       panelBLabel.textContent = fontMap[b].label;
     }
-
     fontAEl.addEventListener('change', updateComparison);
     fontBEl.addEventListener('change', updateComparison);
     inputEl.addEventListener('input', updateComparison);
 
-    /* ========================================
-       SCROLL REVEAL
-    ======================================== */
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    /* ========================================
-       SMOOTH SCROLL
-    ======================================== */
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        e.preventDefault();
-        const t = document.querySelector(a.getAttribute('href'));
-        if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    /* SIDEBAR NAV ACTIVE STATE */
+    const sidebarLinks = document.querySelectorAll('.sidebar-nav a');
+    const sections = document.querySelectorAll('section[id]');
+    const sidebarObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          sidebarLinks.forEach(a => a.classList.remove('active'));
+          const active = document.querySelector(`.sidebar-nav a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
       });
-    });
+    }, { threshold: 0.4 });
+    sections.forEach(s => sidebarObserver.observe(s));
 
-    /* ========================================
-       LANGUAGE TOGGLE (minimal EN/ZH)
-    ======================================== */
-    let isCN = false;
-    document.getElementById('langToggle').addEventListener('click', () => {
-      isCN = !isCN;
-      document.querySelectorAll('[data-lang="cn"]').forEach(el => {
-        el.style.display = isCN ? '' : 'none';
-      });
-    });
+    /* SCROLL REVEAL */
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   </script>
 </body>
 </html>
