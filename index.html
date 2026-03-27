@@ -53,26 +53,6 @@
     }
     .nav-links a:hover::after { width: 100%; }
 
-    /* SIDEBAR NAV */
-    .sidebar-nav {
-      position: fixed; right: 1.5rem; top: 50%; transform: translateY(-50%);
-      z-index: 900; display: flex; flex-direction: column; gap: 0.8rem;
-    }
-    .sidebar-nav a {
-      display: block; width: 10px; height: 10px;
-      border: 2px solid var(--black); background: var(--white);
-      transition: all 0.2s; position: relative; cursor: pointer;
-    }
-    .sidebar-nav a.active,
-    .sidebar-nav a:hover { background: var(--red); border-color: var(--red); }
-    .sidebar-nav a::before {
-      content: attr(data-label);
-      position: absolute; right: 18px; top: 50%; transform: translateY(-50%);
-      font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-      white-space: nowrap; background: var(--black); color: var(--white);
-      padding: 0.2rem 0.5rem; opacity: 0; pointer-events: none; transition: opacity 0.2s;
-    }
-    .sidebar-nav a:hover::before { opacity: 1; }
 
     /* HERO */
     .hero {
@@ -312,6 +292,67 @@
     .footer-links a:hover { color: var(--white); }
     .footer-bottom { display: flex; justify-content: space-between; align-items: center; font-size: 0.65rem; color: rgba(255,255,255,0.25); }
 
+    /* FONT PAIRING */
+    .pairing-section { border-bottom: 3px solid var(--black); }
+    .pairing-intro { padding: 2.5rem 3.5rem; border-bottom: 1px solid var(--lgray); }
+    .pairing-intro p { font-size: 0.88rem; color: var(--gray); max-width: 600px; line-height: 1.8; }
+    .pairing-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-bottom: 3px solid var(--black); }
+    .pairing-card { padding: 3rem 2.5rem; border-right: 3px solid var(--black); border-bottom: 1px solid var(--lgray); position: relative; transition: background 0.25s; }
+    .pairing-card:nth-child(even) { border-right: none; }
+    .pairing-card:hover { background: var(--lgray); }
+    .pairing-card-num { font-family: var(--geo); font-size: 0.6rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 0.5rem; }
+    .pairing-card-name { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .pairing-card-tag { font-family: var(--geo); font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; border: 1.5px solid var(--black); padding: 0.2rem 0.6rem; display: inline-block; margin-bottom: 1.5rem; }
+    .pairing-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+    .pairing-font-box { padding: 1rem; border: 2px solid var(--black); }
+    .pairing-font-box-label { font-family: var(--geo); font-size: 0.55rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray); margin-bottom: 0.5rem; }
+    .pairing-font-box-sample { font-size: 1.8rem; line-height: 1.2; }
+    .pairing-font-box-en { font-size: 0.8rem; font-style: italic; color: var(--gray); margin-top: 0.3rem; }
+    .pairing-card-desc { font-size: 0.82rem; color: var(--gray); line-height: 1.7; }
+
+    /* BRAND CASES */
+    .brand-section { border-bottom: 3px solid var(--black); }
+    .brand-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 3px solid var(--black); }
+    .brand-card { padding: 2.5rem 2rem; border-right: 3px solid var(--black); border-bottom: 1px solid var(--lgray); position: relative; transition: background 0.25s; }
+    .brand-card:nth-child(3n) { border-right: none; }
+    .brand-card:hover { background: var(--lgray); }
+    .brand-logo-box { width: 64px; height: 64px; border: 2px solid var(--black); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-family: var(--geo); font-size: 1.5rem; font-weight: 900; }
+    .brand-name { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .brand-name-en { font-family: var(--geo); font-size: 0.7rem; color: var(--gray); margin-bottom: 1rem; }
+    .brand-font-used { font-family: var(--geo); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin-bottom: 0.5rem; }
+    .brand-font-name { font-size: 0.88rem; font-weight: 700; margin-bottom: 0.8rem; }
+    .brand-font-sample { font-size: 1.5rem; line-height: 1.2; margin-bottom: 0.5rem; }
+    .brand-desc { font-size: 0.78rem; color: var(--gray); line-height: 1.65; }
+
+    /* FONT QUIZ */
+    .quiz-section { border-bottom: 3px solid var(--black); }
+    .quiz-container { padding: 4rem 3.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    .quiz-start, .quiz-result { display: none; }
+    .quiz-start.active, .quiz-result.active { display: block; }
+    .quiz-question-block { display: none; }
+    .quiz-question-block.active { display: block; }
+    .quiz-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .quiz-title-en { font-family: var(--geo); font-size: 0.8rem; font-style: italic; color: var(--gray); margin-bottom: 1.5rem; }
+    .quiz-question-text { font-size: 1rem; font-weight: 700; margin-bottom: 1.5rem; line-height: 1.6; }
+    .quiz-options { display: flex; flex-direction: column; gap: 0.8rem; }
+    .quiz-option { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.2rem; border: 2px solid var(--black); cursor: pointer; transition: all 0.2s; background: var(--white); text-align: left; width: 100%; font-family: var(--geo); font-size: 0.9rem; }
+    .quiz-option:hover { background: var(--black); color: var(--white); }
+    .quiz-option:hover .quiz-option-letter { background: var(--red); color: var(--white); border-color: var(--red); }
+    .quiz-option-letter { width: 28px; height: 28px; border: 2px solid var(--black); display: flex; align-items: center; justify-content: center; font-family: var(--geo); font-size: 0.7rem; font-weight: 700; flex-shrink: 0; transition: all 0.2s; }
+    .quiz-progress { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; }
+    .quiz-progress-bar { flex: 1; height: 4px; background: var(--lgray); }
+    .quiz-progress-fill { height: 4px; background: var(--red); transition: width 0.3s; }
+    .quiz-progress-text { font-family: var(--geo); font-size: 0.65rem; font-weight: 700; color: var(--gray); white-space: nowrap; }
+    .quiz-result-badge { font-family: var(--geo); font-size: 0.6rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; background: var(--yellow); padding: 0.2rem 0.6rem; margin-bottom: 1rem; display: inline-block; }
+    .quiz-result-font-name { font-size: 2rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .quiz-result-font-en { font-family: var(--garamond); font-size: 1rem; font-style: italic; color: var(--gray); margin-bottom: 1rem; }
+    .quiz-result-match { font-family: var(--geo); font-size: 0.65rem; font-weight: 700; color: var(--red); margin-bottom: 1rem; }
+    .quiz-result-desc { font-size: 0.88rem; color: var(--gray); line-height: 1.8; margin-bottom: 1.5rem; }
+    .quiz-result-sample { font-size: 2.5rem; line-height: 1.2; margin-bottom: 1.5rem; }
+    .quiz-result-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .quiz-restart-btn { font-family: var(--geo); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; background: var(--black); color: var(--white); border: none; padding: 0.8rem 2rem; cursor: pointer; transition: all 0.2s; }
+    .quiz-restart-btn:hover { background: var(--red); }
+
     /* RESPONSIVE */
     @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; }
@@ -325,7 +366,9 @@
       .nav-links { display: none; }
       .compare-controls { grid-template-columns: 1fr; }
       .compare-vs { display: none; }
-      .sidebar-nav { display: none; }
+      .pairing-grid { grid-template-columns: 1fr; }
+      .brand-grid { grid-template-columns: 1fr; }
+      .quiz-container { grid-template-columns: 1fr; }
     }
 
     /* SCROLL REVEAL */
@@ -346,18 +389,12 @@
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#categories">Categories</a></li>
+      <li><a href="#pairing">Pairing</a></li>
       <li><a href="#compare">Compare</a></li>
+      <li><a href="#quiz">Quiz</a></li>
       <li><a href="#tree">Family Tree</a></li>
     </ul>
     <button class="lang-btn" id="langToggle" style="font-family:'Space Grotesk',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.1em;border:2px solid #1a1a1a;background:transparent;padding:0.25rem 0.8rem;cursor:pointer;">中文 / EN</button>
-  </nav>
-
-  <!-- SIDEBAR NAV -->
-  <nav class="sidebar-nav" aria-label="Section navigation">
-    <a href="#home" data-label="Home" class="active"></a>
-    <a href="#categories" data-label="Categories"></a>
-    <a href="#compare" data-label="Compare"></a>
-    <a href="#tree" data-label="Tree"></a>
   </nav>
 
   <!-- HERO -->
@@ -450,10 +487,385 @@
     </div>
   </section>
 
+  <!-- FONT PAIRING -->
+  <section class="pairing-section" id="pairing">
+    <div class="section-header">
+      <div class="section-number">02</div>
+      <div class="section-title-group">
+        <h2 class="section-title">Font Pairing</h2>
+        <p class="section-subtitle">The Art of Combining Typefaces for Harmony and Contrast</p>
+      </div>
+    </div>
+    <div class="pairing-intro">
+      <p>Great typography is rarely about one typeface — it is about the relationship between two. The right pairing creates contrast, hierarchy, and rhythm. These six pairings cover the essential combinations every designer should know.</p>
+    </div>
+    <div class="pairing-grid">
+
+      <!-- Pairing 1 -->
+      <div class="pairing-card reveal">
+        <div class="pairing-card-num">Pairing 01</div>
+        <div class="pairing-card-name">Garamond × Helvetica</div>
+        <span class="pairing-card-tag">Editorial · Publishing · Classic</span>
+        <div class="pairing-row">
+          <div class="pairing-font-box">
+            <div class="pairing-font-box-label">Heading — Garamond</div>
+            <div class="pairing-font-box-sample" style="font-family: var(--garamond);">TIMELESS</div>
+            <div class="pairing-font-box-en">Old Style Serif</div>
+          </div>
+          <div class="pairing-font-box">
+            <div class="pairing-font-box-label">Body — Helvetica</div>
+            <div class="pairing-font-box-sample" style="font-family: var(--geo); font-size: 1.2rem;">Clean &<br>Precise</div>
+            <div class="pairing-font-box-en">Swiss Sans-Serif</div>
+          </div>
+        </div>
+        <p class="pairing-card-desc">The most trusted editorial pairing in design history. Garamond's warmth and humanist character creates an inviting reading experience, while Helvetica's neutrality keeps the body text clean and modern. Used by Penguin Books, Yale University Press, and countless book designers worldwide.</p>
+      </div>
+
+      <!-- Pairing 2 -->
+      <div class="pairing-card reveal">
+        <div class="pairing-card-num">Pairing 02</div>
+        <div class="pairing-card-name">Playfair Display × Lato</div>
+        <span class="pairing-card-tag">Magazine · Editorial · Digital</span>
+        <div class="pairing-row">
+          <div class="pairing-font-box">
+            <div class="pairing-font-box-label">Heading — Playfair</div>
+            <div class="pairing-font-box-sample" style="font-family: var(--modern); font-weight: 700;">MODERN</div>
+            <div class="pairing-font-box-en">Didone Serif</div>
+          </div>
+          <div class="pairing-font-box">
+            <div class="pairing-font-box-label">Body — Lato</div>
+            <div class="pairing-font-box-sample" style="font-family: var(--human); font-size: 1.2rem;">Fresh &<br>Elegant</div>
+            <div class="pairing-font-box-en">Humanist Sans</div>
+          </div>
+        </div>
+        <p class="pairing-card-desc">Playfair Display brings high-fashion drama with its exaggerated contrast and editorial flair. Lato's open letterforms and friendly curves create a clean, readable body. This is the pairing behind many award-winning editorial designs and premium brand identities.</p>
+      </div>
+
+      <!-- Pairing 3 -->
+      <div class="pairing-card reveal">
+        <div class="pairing-card-num">Pairing 03</div>
+        <div class="pairing-card-name">Bodoni × Futura</div>
+        <span class="pairing-card-tag">Luxury · Fashion · High Contrast</span>
+        <div class="pairing-row">
+          <div class="pairing-font-box">
+            <div class="pairing-font-box-label">Heading — Bodoni</div>
+            <div class="pairing-font-box-sample" style="font-family: var(--modern); font-style: italic;">LUXE</div>
+            <div class="pairing-font-box-en">Modern Serif</div>
+          </div>
+          <div class="pairing-font-box">
+            <div class="pairing-font-box-label">Body — Futura (Space Grotesk)</div>
+            <div class="pairing-font-box-sample" style="font-family: var(--geo); font-size: 1.2rem;">Bold &<br>Pure</div>
+            <div class="pairing-font-box-en">Geometric Sans</div>
+          </div>
+        </div>
+        <p class="pairing-card-desc">A marriage of extremes — Bodoni's dramatic thick-thin contrast against Futura's pure geometric forms. This pairing radiates sophistication and modernity. Vogue, Harper's Bazaar, and luxury brands have used variations of this pairing for decades to convey exclusivity.</p>
+      </div>
+
+      <!-- Pairing 4 -->
+      <div class="pairing-card reveal">
+        <div class="pairing-card-num">Pairing 04</div>
+        <div class="pairing-card-name">Baskerville × Univers</div>
+        <span class="pairing-card-tag">Academic · Corporate · Authority</span>
+        <div class="pairing-row">
+          <div class="pairing-font-box">
+            <div class="pairing-font-box-label">Heading — Baskerville</div>
+            <div class="pairing-font-box-sample" style="font-family: var(--caslon);">TRUST</div>
+            <div class="pairing-font-box-en">Transitional Serif</div>
+          </div>
+          <div class="pairing-font-box">
+            <div class="pairing-font-box-label">Body — Univers</div>
+            <div class="pairing-font-box-sample" style="font-family: var(--geo); font-size: 1.2rem;">Serious &<br>Structured</div>
+            <div class="pairing-font-box-en">Neo-Grotesque Sans</div>
+          </div>
+        </div>
+        <p class="pairing-card-desc">Baskerville carries the gravitas of Enlightenment-era typography while Univers brings the clarity of the Swiss International Style. This pairing commands trust and authority — a favourite of academic publishers, legal firms, and institutions that need to convey credibility.</p>
+      </div>
+
+      <!-- Pairing 5 -->
+      <div class="pairing-card reveal">
+        <div class="pairing-card-num">Pairing 05</div>
+        <div class="pairing-card-name">Cormorant × Libre Franklin</div>
+        <span class="pairing-card-tag">Literary · Cultural · Elegant</span>
+        <div class="pairing-row">
+          <div class="pairing-font-box">
+            <div class="pairing-font-box-label">Heading — Cormorant</div>
+            <div class="pairing-font-box-sample" style="font-family: 'Cormorant Garamond', serif; font-weight: 600; font-style: italic;">LITERARY</div>
+            <div class="pairing-font-box-en">Garalde Serif</div>
+          </div>
+          <div class="pairing-font-box">
+            <div class="pairing-font-box-label">Body — Libre Franklin</div>
+            <div class="pairing-font-box-sample" style="font-family: var(--human); font-size: 1.2rem;">Clear &<br>Contemporary</div>
+            <div class="pairing-font-box-en">Humanist Sans</div>
+          </div>
+        </div>
+        <p class="pairing-card-desc">Cormorant Garamond's extreme elegance and delicate hairlines create an unmistakably literary atmosphere for headings. Libre Franklin — based on the American Type Founders' Franklin Gothic — provides clean, contemporary body text with historical roots. Perfect for cultural institutions and literary magazines.</p>
+      </div>
+
+      <!-- Pairing 6 -->
+      <div class="pairing-card reveal">
+        <div class="pairing-card-num">Pairing 06</div>
+        <div class="pairing-card-name">Courier × Crimson Pro</div>
+        <span class="pairing-card-tag">Screenplay · Technical · Typewriter</span>
+        <div class="pairing-row">
+          <div class="pairing-font-box">
+            <div class="pairing-font-box-label">Heading — Courier Prime</div>
+            <div class="pairing-font-box-sample" style="font-family: var(--courier); font-size: 1.2rem;">MANUSCRIPT</div>
+            <div class="pairing-font-box-en">Monospace</div>
+          </div>
+          <div class="pairing-font-box">
+            <div class="pairing-font-box-label">Body — Crimson Pro</div>
+            <div class="pairing-font-box-sample" style="font-family: var(--crimson); font-size: 1.2rem; font-style: italic;">Narrative &<br>Warm</div>
+            <div class="pairing-font-box-en">Old Style Serif</div>
+          </div>
+        </div>
+        <p class="pairing-card-desc">The unexpected editorial pairing: Courier Prime's typewriter authenticity meets Crimson Pro's scholarly warmth. This combination creates a sense of intimacy and narrative authority — favoured by literary publications, documentary-style websites, and anyone wanting to evoke the romance of the printed page.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BRAND CASES -->
+  <section class="brand-section" id="brands">
+    <div class="section-header">
+      <div class="section-number">03</div>
+      <div class="section-title-group">
+        <h2 class="section-title">Brand Font Cases</h2>
+        <p class="section-subtitle">Font × Brand — When Typography Becomes Identity</p>
+      </div>
+    </div>
+    <div class="brand-grid">
+
+      <!-- Brand 1 -->
+      <div class="brand-card reveal">
+        <div class="brand-logo-box" style="background: #1a1a1a; color: #fff; font-family: var(--modern); font-size: 1.2rem; font-style: italic;">V</div>
+        <div class="brand-name">Vogue</div>
+        <div class="brand-name-en">Fashion Magazine · 1892</div>
+        <div class="brand-font-used">Font Used</div>
+        <div class="brand-font-name">Bodoni (custom version)</div>
+        <div class="brand-font-sample" style="font-family: var(--modern); font-weight: 700; font-style: italic;">VOGUE</div>
+        <p class="brand-desc">Vogue chose Bodoni — a typeface defined by extreme contrast between thick and thin strokes. The razor-sharp hairline serifs against heavy vertical stems create dramatic tension, perfectly matching fashion's demand for elegance, drama, and visual luxury.</p>
+      </div>
+
+      <!-- Brand 2 -->
+      <div class="brand-card reveal">
+        <div class="brand-logo-box" style="background: #003087; color: #fff; font-family: var(--geo); font-weight: 900;">BMW</div>
+        <div class="brand-name">BMW</div>
+        <div class="brand-name-en">Automotive · 1916</div>
+        <div class="brand-font-used">Font Used</div>
+        <div class="brand-font-name">Helvetica (custom geometry)</div>
+        <div class="brand-font-sample" style="font-family: var(--geo); font-weight: 900;">BMW</div>
+        <p class="brand-desc">BMW's logo uses a highly geometric, custom version of Helvetica. No serifs, no decoration — just pure mechanical precision. The symmetry and clean forms reflect BMW's brand promise: "the ultimate driving machine." Engineering philosophy made visible through letterforms.</p>
+      </div>
+
+      <!-- Brand 3 -->
+      <div class="brand-card reveal">
+        <div class="brand-logo-box" style="background: #fff; border: 2px solid #1a1a1a; font-family: var(--garamond); font-size: 0.7rem; font-weight: bold;">PENGUIN</div>
+        <div class="brand-name">Penguin Books</div>
+        <div class="brand-name-en">Publishing · 1935</div>
+        <div class="brand-font-used">Font Used</div>
+        <div class="brand-font-name">Garamond (Penguin custom)</div>
+        <div class="brand-font-sample" style="font-family: var(--garamond); font-style: italic; font-size: 1.2rem;">Penguin Books</div>
+        <p class="brand-desc">In 1935, Penguin Books selected Garamond as their brand typeface — a decision that defined their visual identity for decades. The humanist warmth of Garamond conveyed credibility and approachability, making serious literature accessible to everyone.</p>
+      </div>
+
+      <!-- Brand 4 -->
+      <div class="brand-card reveal">
+        <div class="brand-logo-box" style="background: var(--red); color: #fff; font-family: var(--geo); font-weight: 900; font-size: 1rem;">NYC</div>
+        <div class="brand-name">New York City Subway</div>
+        <div class="brand-name-en">Public Transit · 1970</div>
+        <div class="brand-font-used">Font Used</div>
+        <div class="brand-font-name">Helvetica Bold (Subway signage)</div>
+        <div class="brand-font-sample" style="font-family: var(--geo); font-weight: 900; font-size: 0.9rem;">42ND STREET</div>
+        <p class="brand-desc">The NYC subway system uses Helvetica Bold for its signage — a choice born of pure functional necessity. In a chaotic, fast-moving, noisy environment, Helvetica's clarity and legibility at all sizes keeps millions of commuters oriented every day. Form follows function at its finest.</p>
+      </div>
+
+      <!-- Brand 5 -->
+      <div class="brand-card reveal">
+        <div class="brand-logo-box" style="background: var(--black); color: #fff; font-size: 0.5rem; font-family: var(--geo); letter-spacing: 0.1em;">VOLKSWAGEN</div>
+        <div class="brand-name">Volkswagen</div>
+        <div class="brand-name-en">Automotive · 1937</div>
+        <div class="brand-font-used">Font Used</div>
+        <div class="brand-font-name">Futura (custom VW version)</div>
+        <div class="brand-font-sample" style="font-family: var(--geo); font-weight: 300; font-size: 1.2rem; letter-spacing: 0.2em;">VOLKSWAGEN</div>
+        <p class="brand-desc">Volkswagen chose Futura — built entirely from geometric primitives: circles, triangles, straight lines. This echoed the Bauhaus philosophy of form following function and aligned perfectly with the brand's engineering-first philosophy. "The people's car" deserved "the people's typeface."</p>
+      </div>
+
+      <!-- Brand 6 -->
+      <div class="brand-card reveal">
+        <div class="brand-logo-box" style="background: var(--yellow); color: var(--black); font-size: 0.6rem; font-family: var(--geo); font-weight: bold;">ABSOLUT</div>
+        <div class="brand-name">Absolut Vodka</div>
+        <div class="brand-name-en">Spirits Brand · 1979</div>
+        <div class="brand-font-used">Font Used</div>
+        <div class="brand-font-name">Futura Condensed (custom)</div>
+        <div class="brand-font-sample" style="font-family: var(--geo); font-weight: 300; font-size: 1.1rem; letter-spacing: 0.15em;">ABSOLUT</div>
+        <p class="brand-desc">Absolut's elongated bottle shape inspired a custom condensed version of Futura. The tall, vertical letterforms echo the bottle's silhouette, making the wordmark feel like part of the product itself. This typography-as-brand-extension approach became one of the most studied design decisions in marketing history.</p>
+      </div>
+
+      <!-- Brand 7 -->
+      <div class="brand-card reveal">
+        <div class="brand-logo-box" style="background: var(--black); color: #fff; font-family: var(--garamond); font-style: italic; font-size: 0.7rem;">The New<br> Yorker</div>
+        <div class="brand-name">The New Yorker</div>
+        <div class="brand-name-en">Magazine · 1925</div>
+        <div class="brand-font-used">Font Used</div>
+        <div class="brand-font-name">Custom Janer (based on Caslon)</div>
+        <div class="brand-font-sample" style="font-family: var(--garamond); font-style: italic; font-size: 1rem;">The New Yorker</div>
+        <p class="brand-desc">The New Yorker's custom typeface — developed by Janet B. Morris — brings calligraphic roundness and humanist warmth to the page. This bespoke letterform captures the magazine's voice: intellectual yet witty, sophisticated yet approachable. Typography as the soul of a publication.</p>
+      </div>
+
+      <!-- Brand 8 -->
+      <div class="brand-card reveal">
+        <div class="brand-logo-box" style="background: var(--blue); color: #fff; font-size: 0.6rem; font-family: var(--geo); letter-spacing: 0.05em;">HARVARD<br>UNIVERSITY</div>
+        <div class="brand-name">Harvard University</div>
+        <div class="brand-name-en">Academic Institution · 1636</div>
+        <div class="brand-font-used">Font Used</div>
+        <div class="brand-font-name">Baskerville (academic custom)</div>
+        <div class="brand-font-sample" style="font-family: var(--caslon); font-size: 1rem;">Harvard</div>
+        <p class="brand-desc">Harvard's Baskerville-based typography embodies 400 years of academic tradition. The refined transitional serifs convey authority and intellectual rigor while remaining inviting. A typeface choice that says: "We have been doing this for centuries, and we do it better than anyone."</p>
+      </div>
+
+      <!-- Brand 9 -->
+      <div class="brand-card reveal">
+        <div class="brand-logo-box" style="background: #f0f0f0; font-size: 0.5rem; font-family: var(--courier); letter-spacing: 0.05em;">GITHUB</div>
+        <div class="brand-name">GitHub</div>
+        <div class="brand-name-en">Developer Platform · 2008</div>
+        <div class="brand-font-used">Font Used</div>
+        <div class="brand-font-name">System UI + Monospace</div>
+        <div class="brand-font-sample" style="font-family: var(--courier); font-size: 1rem; letter-spacing: 0.1em;">github</div>
+        <p class="brand-desc">GitHub's typeface identity blends a clean geometric sans for UI with monospace fonts for code — reflecting the developer's world where code is text and text is code. This pairing immediately communicates: "We are built by and for people who care about the details of how things are written."</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FONT QUIZ -->
+  <section class="quiz-section" id="quiz">
+    <div class="section-header">
+      <div class="section-number">04</div>
+      <div class="section-title-group">
+        <h2 class="section-title">Font Quiz</h2>
+        <p class="section-subtitle">Find Your Perfect Typeface</p>
+      </div>
+    </div>
+
+    <div class="quiz-container">
+      <!-- LEFT: Questions -->
+      <div>
+        <div class="quiz-start active" id="quizStart">
+          <div class="quiz-title">Find Your Perfect Typeface</div>
+          <div class="quiz-title-en">A 4-question journey into type personality</div>
+          <p style="font-size:0.88rem;color:var(--gray);line-height:1.8;margin-bottom:2rem;max-width:480px;">Answer four questions and discover which typeface truly matches your project. No design background needed — just honest, intuitive choices.</p>
+          <button class="quiz-restart-btn" id="quizStartBtn" style="background:var(--red);">Start the Quiz →</button>
+        </div>
+
+        <div class="quiz-question-block" id="q1">
+          <div class="quiz-progress">
+            <div class="quiz-progress-bar"><div class="quiz-progress-fill" style="width:25%"></div></div>
+            <span class="quiz-progress-text">Q1 / 4</span>
+          </div>
+          <div class="quiz-question-text">What is the primary purpose of your project?</div>
+          <div class="quiz-options">
+            <button class="quiz-option" onclick="answer(1,'a')">
+              <span class="quiz-option-letter">A</span>Long-form reading — books, articles, editorial content
+            </button>
+            <button class="quiz-option" onclick="answer(1,'b')">
+              <span class="quiz-option-letter">B</span>Headlines, posters, or logos — grabbing attention fast
+            </button>
+            <button class="quiz-option" onclick="answer(1,'c')">
+              <span class="quiz-option-letter">C</span>Digital products — apps, websites, or UI design
+            </button>
+            <button class="quiz-option" onclick="answer(1,'d')">
+              <span class="quiz-option-letter">D</span>Brand identity — establishing a distinctive, lasting impression
+            </button>
+          </div>
+        </div>
+
+        <div class="quiz-question-block" id="q2">
+          <div class="quiz-progress">
+            <div class="quiz-progress-bar"><div class="quiz-progress-fill" style="width:50%"></div></div>
+            <span class="quiz-progress-text">Q2 / 4</span>
+          </div>
+          <div class="quiz-question-text">Which personality resonates most with your project?</div>
+          <div class="quiz-options">
+            <button class="quiz-option" onclick="answer(2,'a')">
+              <span class="quiz-option-letter">A</span>Warm, human, approachable — like a handwritten note
+            </button>
+            <button class="quiz-option" onclick="answer(2,'b')">
+              <span class="quiz-option-letter">B</span>Precise, rational, authoritative — like a well-oiled machine
+            </button>
+            <button class="quiz-option" onclick="answer(2,'c')">
+              <span class="quiz-option-letter">C</span>Classic, elegant, timeless — like a heritage brand
+            </button>
+            <button class="quiz-option" onclick="answer(2,'d')">
+              <span class="quiz-option-letter">D</span>Bold, dramatic, high-contrast — making a visual statement
+            </button>
+          </div>
+        </div>
+
+        <div class="quiz-question-block" id="q3">
+          <div class="quiz-progress">
+            <div class="quiz-progress-bar"><div class="quiz-progress-fill" style="width:75%"></div></div>
+            <span class="quiz-progress-text">Q3 / 4</span>
+          </div>
+          <div class="quiz-question-text">Who is your primary audience?</div>
+          <div class="quiz-options">
+            <button class="quiz-option" onclick="answer(3,'a')">
+              <span class="quiz-option-letter">A</span>General readers — wide demographic, accessible content
+            </button>
+            <button class="quiz-option" onclick="answer(3,'b')">
+              <span class="quiz-option-letter">B</span>Creative professionals, designers, trend-forward audiences
+            </button>
+            <button class="quiz-option" onclick="answer(3,'c')">
+              <span class="quiz-option-letter">C</span>Academics, professionals, or corporate stakeholders
+            </button>
+            <button class="quiz-option" onclick="answer(3,'d')">
+              <span class="quiz-option-letter">D</span>Luxury consumers, fashion-forward, premium audience
+            </button>
+          </div>
+        </div>
+
+        <div class="quiz-question-block" id="q4">
+          <div class="quiz-progress">
+            <div class="quiz-progress-bar"><div class="quiz-progress-fill" style="width:100%"></div></div>
+            <span class="quiz-progress-text">Q4 / 4</span>
+          </div>
+          <div class="quiz-question-text">What era or movement does your project feel closest to?</div>
+          <div class="quiz-options">
+            <button class="quiz-option" onclick="answer(4,'a')">
+              <span class="quiz-option-letter">A</span>Renaissance humanism — warmth, craft, tradition
+            </button>
+            <button class="quiz-option" onclick="answer(4,'b')">
+              <span class="quiz-option-letter">B</span>20th century modernism — precision, function, clarity
+            </button>
+            <button class="quiz-option" onclick="answer(4,'c')">
+              <span class="quiz-option-letter">C</span>Post-war classicism — elegance, luxury, refinement
+            </button>
+            <button class="quiz-option" onclick="answer(4,'d')">
+              <span class="quiz-option-letter">D</span>Contemporary expression — bold, creative, forward-thinking
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Result -->
+      <div class="quiz-result-panel">
+        <div class="quiz-result active" id="quizResult">
+          <div class="quiz-result-badge">Recommended Typeface</div>
+          <div class="quiz-result-font-name" id="resultName">—</div>
+          <div class="quiz-result-font-en" id="resultEn">—</div>
+          <div class="quiz-result-match" id="resultMatch"></div>
+          <div class="quiz-result-desc" id="resultDesc">—</div>
+          <div class="quiz-result-sample" id="resultSample" style="font-family: var(--garamond);">—</div>
+          <div class="quiz-result-tags" id="resultTags"></div>
+          <button class="quiz-restart-btn" onclick="restartQuiz()" style="margin-top:1.5rem;">Take Again ↺</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- OLD STYLE SERIFS -->
   <section class="font-section" id="old-style">
     <div class="section-header">
-      <div class="section-number">02</div>
+      <div class="section-number">05</div>
       <div class="section-title-group">
         <h2 class="section-title">Old Style Serifs</h2>
         <p class="section-subtitle">Humanism in Metal — Inspired by the Renaissance Quill</p>
@@ -508,7 +920,7 @@
   <!-- TRANSITIONAL & MODERN SERIFS -->
   <section class="font-section" id="modern-serifs">
     <div class="section-header">
-      <div class="section-number">03</div>
+      <div class="section-number">06</div>
       <div class="section-title-group">
         <h2 class="section-title">Transitional & Modern Serifs</h2>
         <p class="section-subtitle">The Age of Reason Meets the Industrial Revolution</p>
@@ -585,7 +997,7 @@
   <!-- SANS-SERIF -->
   <section class="font-section" id="sans-serif">
     <div class="section-header">
-      <div class="section-number">04</div>
+      <div class="section-number">07</div>
       <div class="section-title-group">
         <h2 class="section-title">Sans-Serif Typefaces</h2>
         <p class="section-subtitle">Form Follows Function — The Bauhaus Revolution in Letterform</p>
@@ -662,7 +1074,7 @@
   <!-- SLAB & EXPRESSIVE -->
   <section class="font-section" id="slab-expressive">
     <div class="section-header">
-      <div class="section-number">05</div>
+      <div class="section-number">08</div>
       <div class="section-title-group">
         <h2 class="section-title">Slab Serif & Expressive</h2>
         <p class="section-subtitle">The Industrial Voice — From Typewriters to Tattoo Parlors</p>
@@ -718,7 +1130,7 @@
   <section class="comparison-section" id="compare">
     <div class="compare-header">
       <div class="section-header" style="padding: 0; border-bottom: none;">
-        <div class="section-number">06</div>
+        <div class="section-number">09</div>
         <div class="section-title-group" style="border-bottom: none; padding-bottom: 0;">
           <h2 class="section-title">Font Comparison</h2>
           <p class="section-subtitle">See the Personality — Side by Side</p>
@@ -775,7 +1187,7 @@
   <!-- FAMILY TREE -->
   <section class="tree-section" id="tree">
     <div class="section-header" style="padding: 0 0 3rem; border-bottom: 3px solid var(--black); margin-bottom: 3rem;">
-      <div class="section-number">07</div>
+      <div class="section-number">10</div>
       <div class="section-title-group">
         <h2 class="section-title">The Type Family Tree</h2>
         <p class="section-subtitle">From Renaissance Calligraphy to Digital Screens — 500 Years of Evolution</p>
@@ -846,7 +1258,9 @@
         <ul class="footer-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#categories">Categories</a></li>
+          <li><a href="#pairing">Font Pairing</a></li>
           <li><a href="#compare">Font Compare</a></li>
+          <li><a href="#quiz">Font Quiz</a></li>
           <li><a href="#tree">Family Tree</a></li>
         </ul>
       </div>
@@ -905,19 +1319,79 @@
     fontBEl.addEventListener('change', updateComparison);
     inputEl.addEventListener('input', updateComparison);
 
-    /* SIDEBAR NAV ACTIVE STATE */
-    const sidebarLinks = document.querySelectorAll('.sidebar-nav a');
-    const sections = document.querySelectorAll('section[id]');
-    const sidebarObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          sidebarLinks.forEach(a => a.classList.remove('active'));
-          const active = document.querySelector(`.sidebar-nav a[href="#${entry.target.id}"]`);
-          if (active) active.classList.add('active');
-        }
-      });
-    }, { threshold: 0.4 });
-    sections.forEach(s => sidebarObserver.observe(s));
+    /* FONT QUIZ */
+    const resultMap = {
+      garamond:    { name: 'Garamond',       en: "Claude Garamond · 1540", css: 'var(--garamond)',   sample: 'Timeless Typography', match: '87% Match', desc: 'Garamond is the quintessential old-style serif — warm, scholarly, and supremely readable. It draws from Renaissance calligraphic tradition and remains the gold standard for book typography. Perfect for long-form reading, literary magazines, and any project that values warmth and authenticity.', tags: ['Book Typography', 'Long-form Reading', 'Classic', 'Elegant'] },
+      caslon:      { name: 'Caslon',         en: "William Caslon · 1722",   css: 'var(--caslon)',     sample: 'The British Tradition', match: '83% Match', desc: 'Caslon carries the sturdiness and character of old English printing. Its slightly irregular strokes give text a tactile, handmade quality. Used historically for everything from Bibles to newspapers, it adds historical gravitas and British charm to any project.', tags: ['British Typography', 'Historical', 'Books', 'Print Heritage'] },
+      baskerville: { name: 'Baskerville',    en: "John Baskerville · 1757", css: 'var(--caslon)',     sample: 'Refined Authority', match: '85% Match', desc: 'Baskerville bridges the humanist tradition and the age of Enlightenment precision. Its razor-sharp serifs and high contrast convey authority and refinement. Apple chose it as the default screen serif — a testament to its digital readability and classical elegance.', tags: ['Refined', 'Academic', 'Authority', 'Apple Heritage'] },
+      bodoni:      { name: 'Bodoni',         en: "Giambattista Bodoni · 1798", css: 'var(--modern)', sample: 'Luxury & Drama', match: '89% Match', desc: 'Bodoni is pure drama — extreme contrast between thick and thin strokes creates headlines that demand attention. A favourite of fashion magazines and luxury brands. Use it for titles and display text where visual impact matters more than long-form readability.', tags: ['Fashion', 'Luxury', 'Headlines', 'High Contrast'] },
+      helvetica:   { name: 'Helvetica',      en: "Miedinger · Hoffmann · 1957", css: 'var(--geo)', sample: 'Universal Clarity', match: '91% Match', desc: 'Helvetica is the world's most famous typeface — a monument to Swiss design principles: clarity, neutrality, and universal legibility. Its perfectly balanced letterforms work in any context from corporate branding to wayfinding. When in doubt, Helvetica delivers.', tags: ['Swiss Design', 'Corporate', 'Wayfinding', 'Universal'] },
+      futura:      { name: 'Futura',         en: "Paul Renner · 1927",       css: 'var(--geo)',         sample: 'Pure Geometry', match: '88% Match', desc: 'Futura is Bauhaus philosophy made letterform — built entirely from circles, triangles, and straight lines. It communicates modernity, efficiency, and geometric purity. Used by Volkswagen and dozens of modernist brands. For projects that need to feel forward-thinking and structurally pure.', tags: ['Bauhaus', 'Modern', 'Geometric', 'Automotive'] },
+      courier:     { name: 'Courier Prime',  en: "Adrian Frutiger · 2012",   css: 'var(--courier)',     sample: 'Typewriter Soul', match: '82% Match', desc: 'Courier Prime brings the authentic warmth of typewriter aesthetics to digital screens. Its monospace rhythm creates a sense of narrative intimacy — favoured by screenwriters, academics, and designers who want to evoke the romance of pre-digital correspondence.', tags: ['Typewriter', 'Screenplay', 'Narrative', 'Retro'] },
+      lobster:     { name: 'Lobster',        en: "Pablo Impallari · 2011",   css: 'var(--script)',      sample: 'Handwritten Warmth', match: '84% Match', desc: 'Lobster became one of the most viral typefaces of the 2010s with its connected, brush-like letterforms that evoke handwritten casualness. Use it to add personality, friendliness, and approachability to projects targeting creative, casual, or food-related audiences.', tags: ['Handwritten', 'Casual', 'Creative', 'Friendly'] }
+    };
+
+    function getResult(answers) {
+      const q1 = answers[1], q2 = answers[2], q3 = answers[3], q4 = answers[4];
+      if (q1 === 'a') {
+        if (q2 === 'a') return 'caslon';
+        if (q2 === 'b') return 'helvetica';
+        if (q2 === 'c') return 'garamond';
+        return 'bodoni';
+      }
+      if (q1 === 'b') {
+        if (q2 === 'c') return 'baskerville';
+        return 'bodoni';
+      }
+      if (q1 === 'c') {
+        if (q4 === 'b') return 'helvetica';
+        return 'futura';
+      }
+      if (q1 === 'd') {
+        if (q3 === 'd') return 'bodoni';
+        if (q4 === 'a') return 'garamond';
+        return 'baskerville';
+      }
+      return 'helvetica';
+    }
+
+    function showResult(key) {
+      const data = resultMap[key];
+      document.getElementById('resultName').textContent = data.name;
+      document.getElementById('resultEn').textContent = data.en;
+      document.getElementById('resultMatch').textContent = data.match;
+      document.getElementById('resultDesc').textContent = data.desc;
+      document.getElementById('resultSample').textContent = data.sample;
+      document.getElementById('resultSample').style.fontFamily = data.css;
+      document.getElementById('resultTags').innerHTML = data.tags.map(t => `<span style="font-family:var(--geo);font-size:0.6rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;border:1.5px solid var(--black);padding:0.2rem 0.55rem;">${t}</span>`).join('');
+    }
+
+    function answer(q, val) {
+      answers[q] = val;
+      document.getElementById('q' + q).classList.remove('active');
+      if (q < 4) {
+        document.getElementById('q' + (q + 1)).classList.add('active');
+      } else {
+        const result = getResult(answers);
+        showResult(result);
+        document.getElementById('quizStart').classList.remove('active');
+        document.getElementById('quizResult').classList.add('active');
+      }
+    }
+
+    function restartQuiz() {
+      answers = {};
+      document.querySelectorAll('.quiz-question-block').forEach(el => el.classList.remove('active'));
+      document.getElementById('quizStart').classList.add('active');
+      document.getElementById('quizResult').classList.remove('active');
+    }
+
+    document.getElementById('quizStartBtn').addEventListener('click', () => {
+      document.getElementById('quizStart').classList.remove('active');
+      document.getElementById('q1').classList.add('active');
+    });
+
+    let answers = {};
 
     /* SCROLL REVEAL */
     const revealObserver = new IntersectionObserver(entries => {
